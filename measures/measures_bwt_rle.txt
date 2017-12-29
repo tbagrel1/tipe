@@ -1,0 +1,79 @@
+for i in range(4, 16)
+2 ** 4 = 16o -> 2 ** 16 = 65536o blocks
+
+for i in {4..16}
+do
+echo "$i" > BLOCK_SIZE
+time python3 bwt_rle.py
+done
+
+### DATA DUMP ###
+
+-30.92757677159501
+
+real	0m3,474s
+user	0m3,430s
+sys	0m0,045s
+-26.3944171376717
+
+real	0m3,174s
+user	0m3,154s
+sys	0m0,020s
+-21.160259396586632
+
+real	0m3,088s
+user	0m3,072s
+sys	0m0,016s
+-14.87421600204273
+
+real	0m2,998s
+user	0m2,978s
+sys	0m0,020s
+-7.828317853825628
+
+real	0m2,995s
+user	0m2,983s
+sys	0m0,012s
+-0.9956050836491981
+
+real	0m3,463s
+user	0m3,443s
+sys	0m0,020s
+5.342362212386476
+
+real	0m3,658s
+user	0m3,649s
+sys	0m0,008s
+10.987304751770033
+
+real	0m3,876s
+user	0m3,860s
+sys	0m0,016s
+16.00736600689657
+
+real	0m5,049s
+user	0m5,040s
+sys	0m0,008s
+20.077918689121976
+
+real	0m7,329s
+user	0m7,321s
+sys	0m0,008s
+23.263734709053875
+
+real	0m10,056s
+user	0m9,984s
+sys	0m0,072s
+25.644598445834887
+
+real	0m17,331s
+user	0m17,079s
+sys	0m0,252s
+27.395160499984573
+
+real	0m30,109s
+user	0m29,221s
+sys	0m0,888s
+
+
+### END DATA DUMP ###

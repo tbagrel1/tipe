@@ -29,7 +29,8 @@ The input format is a simple *Python* string (`str`)
 
 ## Output format
 
-The output format is 
+The output format is a `list` of `int` where each int represents a `N_NB + 
+N_CHAR` bits word.
 
 ## Sources
 

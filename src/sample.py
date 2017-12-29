@@ -5,5 +5,5 @@
 
 SAMPLE = ""
 
-with open("src/sample.txt", "r", encoding="utf-8") as sample_file:
+with open("sample.txt", "r", encoding="utf-8") as sample_file:
     SAMPLE = sample_file.read()

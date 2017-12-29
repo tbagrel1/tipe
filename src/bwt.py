@@ -68,6 +68,5 @@ def main():
     my_test_string = "Je suis ton pere !"
     print(inverse_bwt(bwt(my_test_string)))
 
-
 if __name__ == "__main__":
     main()
