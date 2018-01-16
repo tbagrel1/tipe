@@ -6,7 +6,7 @@ typedef unsigned char uchar;
 
 #define BLOCK_SIZE 256
 #define INDEX_SIZE sizeof(index_t)
-#define PADDING_CHAR (uchar)(128)
+#define PADDING_CHAR (uchar)(2)
 
 typedef uchar index_t;
 
@@ -36,6 +36,7 @@ int comp_lex(const void *raw_offset_a, const void *raw_offset_b) {
            -1 : (get(os_a, i) == get(os_b, i) ? 0 : 1);
 }
 
+
 void bwt_code_block(str in_str, str out_str) {
     // BEGIN Global
     current_str = in_str;
@@ -52,9 +53,10 @@ void bwt_code_block(str in_str, str out_str) {
             index = i;  // Known risks
         }
     }
-    memcpy(out_str, &index, INDEX_SIZE);
+    *(index_t *)(out_str) = index;
 }
 
+/*
 str bwt_code(str in_str) {
     size_t size = strlen((const char *)in_str);
     size_t nb_block = (size_t)(ceil(size / BLOCK_SIZE));
@@ -77,6 +79,7 @@ str bwt_code(str in_str) {
         last_block,
         (result_str + (nb_block - 1) * (INDEX_SIZE + BLOCK_SIZE)));
 }
+*/
 
 static inline uchar get_char(const uchar *ichar) {
     return *(ichar + INDEX_SIZE);

@@ -3,4 +3,4 @@ project(tipe_c C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(tipe_c main.c bwt.c)
+add_executable(tipe_c main.c bwt.c btw_2.c)
