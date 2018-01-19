@@ -1,0 +1,66 @@
+/* Styles for our header */
+header { background: #eee8d5; padding: 1.25rem; }
+header h1 { font-size: 1.25rem; line-height: 1.25rem; margin: 0; }
+header nav { margin: 0; }
+
+@media (min-width: 62.5rem) {
+    /* If the page is wide enough, scoot the header off to the side. */
+    header {
+        float: left;
+        margin-left: -13.75rem;
+        width: 10rem;
+    }
+    /*
+     * Typesetter.css tries to do the same trick specifically for <nav>, so
+     * we've got to override all those settings here.
+     */
+    header nav { float: none; outline: none; padding: 0; width: auto; }
+    header nav ul { margin-bottom: 0; }
+}
+
+/* Styles for TOC links */
+.headerlink { visibility: hidden; text-decoration: none; }
+*:hover>.headerlink { visibility: visible }
+
+/* Styles for Pygments syntax highlighting */
+.codehilite { margin-left: 0; width: 100%; }
+
+.codehilite .linenodiv { margin: 0; }
+
+.codehilite .linenos { width: 1.25rem; text-align: right; }
+
+.codehilite pre { margin: 0; padding: 0; border: none; }
+.codehilite .linenos pre { font-family: sans-serif; }
+
+/* Comments and docstrings */
+.codehilite .c,
+.codehilite .c1,
+.codehilite .sd {
+    color: #93a1a1;
+}
+/* Keyword */
+.codehilite .k { font-weight: bold; }
+/* Literals */
+.codehilite .s,
+.codehilite .s1,
+.codehilite .s2,
+.codehilite .si,
+.codehilite .mi,
+.codehilite .mf,
+.codehilite .mo {
+    color: #d33682;
+}
+/* Formatting codes and escapes. */
+.codehilite .si,
+.codehilite .se {
+    font-style: italic;
+}
+
+/* Operators and punctuation */
+.codehilite .o,
+.codehilite .p {
+    color: #575;
+}
+
+figure { text-align: center; }
+figure img { max-width: 100%; }

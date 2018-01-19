@@ -1,0 +1,101 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{tbagrelstandard}
+ \usepackage{pstricks,pst-plot,pstricks-add,pst-math,pst-node,variations,pst-poly}
+\usepackage[bibstyle=numeric, citestyle=numeric-verb, sorting=none]{biblatex}
+\usepackage{indentfirst}
+% \usepackage{charter}
+\geometry{top=2cm, bottom=2cm, left=1.25cm, right=1.25cm}
+
+\pagestyle{fancy}
+
+\lhead{\footnotesize Thomas Bagrel}
+\chead{\small \bf{MCOT TIPE}}
+\rhead{\footnotesize 2017-2018}
+\lfoot{\footnotesize Lycée Henri \sc{Poincaré}}
+\cfoot{\small Page \bf{\thepage}}
+\rfoot{\footnotesize Compression d'un flux de données}
+
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+\renewcommand{\bibfont}{\small}
+
+% \setlength{\parskip}{0.5\baselineskip}
+
+\bibliography{mcot}
+
+\begin{document}
+
+\selectlanguage{french}
+
+\fancytitle{Association et comparaison de méthodes de compression d'un flux de données}{0.65\linewidth}{0.25cm}{\bfseries\Large}
+
+\section*{Positionnement thématique}
+
+\hspace{1cm} {\itshape
+Informatique pratique, Informatique théorique, Probabilités, \'Etude statistique
+}
+
+\section*{Mots-clés}
+
+\hspace{1cm} {\large \begin{tabular}{|lr|}
+Compression de données & Data compression \\
+Méthode adaptative & Adaptive method \\
+Méthode stationnaire & Stationary method \\
+Codage arithmétique & Arithmetic coding \\
+Modélisation & Modeling \\
+Transformée & Transform \\
+\end{tabular}}
+
+\section*{Bibliographie commentée}
+
+La compression de données sans pertes consiste à réduire la taille d'un document quelconque sans dégrader l'information qu'il contient, c'est-à-dire être capable de restituer parfaitement l'information initiale au cours de la décompression\tss{\cite{data_comp_explained, intro_proba, coding_crypto}}.
+
+\vspace{0.2cm}
+
+La compression se décompose alors en deux phases, la modélisation et le codage des données. La première phase consiste à définir un modèle pour les données, le plus proche de la réalité possible, afin d'estimer au mieux les probabilités d'apparition des différents symboles qui composent la source\tss{\cite{data_comp_explained}}, ces dernières définissant alors la compression théorique maximale. Or la recherche de la modélisation parfaite n'est pas un problème ``calculable'' (or. \it{computable}), c'est plutôt, dans une certaine mesure, un problème d'intelligence artificielle\tss{\cite{data_comp_explained}}. En effet, les meilleurs estimations de la probabilité d'apparition d'un symbole suivant le contexte ne peuvent être effectuées qu'avec une compréhension parfaite de la source (et donc du type de documents : texte, photo\ldots{}). La recherche de la meilleure modélisation se limitera donc, dans notre \bf{\red \'Eviter le pluriel de majest\'e ! Partout dans le texte ...} cas, à une étude expérimentale.
+
+\vspace{0.2cm}
+
+La seconde phase, le codage, consiste à associer un code binaire à chaque symbole ou groupe de symboles de la source en fonction de sa probabilité d'appartion calculée avec le modèle. Or contrairement à l'étape précédente, c'est un problème résolu, dont on connaît les résultats optimaux atteignables\tss{\cite{data_comp_explained}}. Le célèbre code de \sc{Huffman}\tss{\cite{data_comp_explained, intro_proba, coding_crypto, dev_comp_spertes}}, que nous utiliserons au moins pour le début, est proche de la solution optimale, et s'il force à coder chaque symbole sur un nombre entier de bits, il reste cependant relativement simple à implémenter. La solution optimale peut elle être atteinte avec le codage arithmétique ou le codage asymétrique\tss{\cite{data_comp_explained}}, qui sont tous deux utilisés aujourd'hui dans les meilleurs algorithmes de compression.
+
+\vspace{0.2cm}
+
+Notons qu'une troisième phase, optionnelle, dite ``transformée'' (et qui se fond parfois dans l'étape de codage), peut prendre place dans le processus. Elle consiste alors à appliquer une transformation réversible sur les données de manière à simplifier le modèle ou à réduire la taille de l'ensemble. On peut par exemple citer la transformée de \sc{Burrows-Wheeler} qui permet -- de manière réversible -- de changer l'ordre des symboles de la source de manière à placer le plus souvent possible des symboles identiques côte-à-côte\tss{\cite{data_comp_explained}}.
+
+\vspace{0.2cm}
+
+C'est alors le chaînage et l'interfaçage de ces deux ou trois méthodes (modèle, éventuellement transformée et codage) qui permettent de créer un algorithme de compression. Par exemple, le fameux \sf{bzip2}, très utilisé sous \sf{Linux} (extension \tt{\rm{(}.tar\rm{)}.bz2}), utilise une association de transformée de \sc{Burrows-Wheeler} et de codage de \sc{Huffman} (entre autres)\tss{\cite{data_comp_explained}}.
+
+\vspace{0.2cm}
+
+Enfin, certains des meilleurs algorithmes à l'heure actuelle comme \sf{paq8px} (1\tss{er} sur \it{Maximum Compression benchmark} en 2009)\tss{\cite{data_comp_explained}} tentent de reconnaître le type de données afin d'adapter la méthode de compression. Nous ne nous intéresserons pas à ce genre de méthodes ici, trop avancées et trop compliquées à évaluer à notre niveau. Nous nous contenterons d'étudier des algorithmes ``universels'', qui appliquent le même traitement à tout type d'entrée, et qui donnent néanmoins des résultats convaincants.
+
+\section*{Problématique retenue}
+
+Le chaînage de méthodes de compression n'est en général pas possible car à la sortie d'une première étape de compression, les données perdent la régularité et les structures qui sont justement utilisées pour produire un modèle efficace. Il s'agira donc de vérifier dans quelle mesure le chaînage est efficace (ou non), ainsi que de mesurer les gains apportés par une étape supplémentaire de transformée. 
+\\
+{\bf{\red Je propose \`a la place de ce qui suit : On comparera enfin les différents résultats entre eux et avec les standards actuels. Ou m\^eme : Je comparerai ...}}\\Enfin, il s'agira de comparer les différents résultats entre eux et avec les standards actuels.
+
+\section*{Objectifs du \sc{tipe}}
+
+\begin{enumerate}
+  \item Association de méthodes de compression : il sera question d'essayer de chaîner différents algorithmes de compression (ou de récursivement compresser les mêmes données avec le même algorithme) pour mesurer les gains éventuels.
+  \item Mesures : \bf{\red Essayer d'\'eviter cette redite de verbe te sera ais\'e si tu optes pour la premi\`ere personne.}\\il s'agira de mesurer l'impact du choix modèle - [transformée] - codage sur les performances de l'algorithme de compression aussi bien au niveau du taux de compression que de la vitesse d'exécution.
+  \item Optimisations : dans cette partie très expérimentale, l'objectif sera d'ajuster les différents paramètres des meilleurs algorithmes que nous aurons implémenté et de les comparer aux meilleurs solutions industrielles actuelles.
+\end{enumerate}
+
+Les tests seront effectués sur le \href{https://en.wikipedia.org/wiki/Calgary_corpus}{\itshape{Calgary corpus}}, qui malgré son âge, nous permettra de disposer de nombreux résultats concernant les solutions déjà existantes, qui ont quasiment toutes été testées sur ce dernier.
+
+Les langages utilisés pour l'étude seront le \sf{Python} pour le prototypage, et le \sf{C} pour l'implémentation des méthodes retenues (pour lesquelles des mesures de taux de compression et de temps d'exécution seront effectuées).
+
+\printbibliography
+
+\cite{intro_proba} et \cite{coding_crypto} sont des documents généraux qui nous ont permis d'entrer dans le domaine de la compression de données et de comprendre ses règles essentielles. \cite{dev_comp_spertes} permet de découvrir de nouvelles voies pour améliorer les algorithmes existants, avec une certaine originalité.
+
+\cite{algo_adapt} et \cite{huff_dyn} sont des documents techniques qui nous ont apporté des informations fiables pour l'implémentation d'algorithmes adaptatifs, c'est-à-dire qui ne nécessitent pas une première lecture totale de la source, et qui évoluent donc au fur et à mesure de la lecture.
+
+Enfin, \cite{data_comp_explained} est une ``mine d'or'' qui nous a permis de beaucoup progresser dans notre travail, avec une approche pratique, permettant de comprendre comment fonctionnent les meilleurs algorithmes de compression aujourd'hui, ainsi que d'avoir de bonnes bases pour réaliser les nôtres.
+
+Notons que l'auteur de \it{Data Compression Explained}\tss{\cite{data_comp_explained}}, Matt \sc{Mahoney}, est un expert reconnu de la compression de données ainsi que le créateur et mainteneur de la famille d'algorithmes de compression \sf{ZPAQ}, qui sont en tête de la plupart des \it{benchmarks}.
+
+\end{document}

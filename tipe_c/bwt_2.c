@@ -1,11 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-typedef unsigned char uchar;
-typedef unsigned char* str;
-
-typedef __uint16_t index_t;  // Blocks up to 65536 o
-const size_t index_size = sizeof(index_t);
+#include "bwt_2.h"
 
 str current_str = NULL;
 size_t current_size = 0;
@@ -13,6 +9,15 @@ size_t current_size = 0;
 static inline uchar get(index_t offset, index_t i) {
     return current_str[(offset + i) % current_size];
 }
+
+static inline uchar get_char(const uchar *ichar) {
+    return *(ichar + INDEX_SIZE);
+}
+
+static inline index_t get_i(uchar const *ichar) {
+    return *(index_t *)(ichar);
+}
+
 
 int comp_lex(const void *raw_offset_a, const void *raw_offset_b) {
     index_t os_a = *(index_t *)(raw_offset_a);
@@ -22,7 +27,7 @@ int comp_lex(const void *raw_offset_a, const void *raw_offset_b) {
         i++;
     }
     if (i == current_size) {
-        return 0
+        return 0;
     }
     return get(os_a, i) < get(os_b, i) ? -1 : 1;
 }
@@ -39,10 +44,10 @@ str bwt_code_block(str in_str, size_t in_size) {
         rot_tab[i] = i;
     }
     qsort(rot_tab, current_size, sizeof(*rot_tab), comp_lex);
-    str out_str = malloc((index_size + current_size) * sizeof(*out_str));
+    str out_str = malloc((INDEX_SIZE + current_size) * sizeof(*out_str));
     index_t index;
     for (index_t i = 0; i < current_size; i++) {
-        out_str[index_size + i] = get(rot_tab[i], current_size - 1);
+        out_str[INDEX_SIZE + i] = get(rot_tab[i], current_size - 1);
         if (rot_tab[i] == 0) {
             index = i;
         }
@@ -61,22 +66,14 @@ int comp_ichar(const void *raw_ichar_a, const void *raw_ichar_b) {
            -1 : (char_a == char_b ? 0 : 1);
 }
 
-static inline uchar get_char(const uchar *ichar) {
-    return *(ichar + index_size);
-}
-
-static inline index_t get_i(uchar const *ichar) {
-    return *(index_t *)(ichar);
-}
-
 str bwt_decode_block(str in_coded, size_t in_size) {
     index_t index = *(index_t *)(in_coded);
-    str coded_str = in_coded + index_size;
-    size_t ichar_size = index_size + sizeof(uchar);
+    str coded_str = in_coded + INDEX_SIZE;
+    size_t ichar_size = INDEX_SIZE + sizeof(uchar);
     uchar *ichar_concat = malloc(in_size * ichar_size);
     for (index_t i = 0; i < in_size; i++) {
         *(index_t *)(ichar_concat + i * ichar_size) = i;
-        *(ichar_concat + i * ichar_size + index_size) = coded_str[i];
+        *(ichar_concat + i * ichar_size + INDEX_SIZE) = coded_str[i];
     }
     qsort(ichar_concat, in_size, ichar_size, comp_ichar);
     str out_str = malloc(in_size * sizeof(*out_str));
