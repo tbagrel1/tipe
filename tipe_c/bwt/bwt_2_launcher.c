@@ -18,8 +18,9 @@ int bwt_code(str path_in, str path_out) {
         bytes_read = fread(buffer, sizeof(*buffer), BLOCK_SIZE, file_in);
         if (bytes_read > 0) {
             coded_data = bwt_code_block(buffer, bytes_read);
-            fwrite(coded_data, sizeof(*coded_data), INDEX_SIZE + bytes_read,
-                   file_out);
+            fwrite(
+                coded_data, sizeof(*coded_data), INDEX_SIZE + bytes_read,
+                file_out);
             free(coded_data);
         }
     } while (bytes_read == BLOCK_SIZE);
@@ -42,12 +43,13 @@ int bwt_decode(str path_in, str path_out) {
     str decoded_data;
     size_t bytes_read;
     do {
-        bytes_read = fread(buffer, sizeof(*buffer), INDEX_SIZE + BLOCK_SIZE,
-                           file_in);
+        bytes_read = fread(
+            buffer, sizeof(*buffer), INDEX_SIZE + BLOCK_SIZE, file_in);
         if (bytes_read > 0) {
             decoded_data = bwt_decode_block(buffer, bytes_read - INDEX_SIZE);
-            fwrite(decoded_data, sizeof(*decoded_data),
-                   bytes_read - INDEX_SIZE, file_out);
+            fwrite(
+                decoded_data, sizeof(*decoded_data), bytes_read - INDEX_SIZE,
+                file_out);
             free(decoded_data);
         }
     } while (bytes_read == INDEX_SIZE + BLOCK_SIZE);

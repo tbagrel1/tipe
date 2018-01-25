@@ -1,4 +1,0 @@
-/home/thomas/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.3727.114/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/thomas/Drive/tbagrel/courses/courses_2017_2018/tipe/tipe_c
--- Configuring done
--- Generating done
--- Build files have been written to: /home/thomas/Drive/tbagrel/courses/courses_2017_2018/tipe/tipe_c/cmake-build-debug
