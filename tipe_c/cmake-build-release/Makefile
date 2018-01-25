@@ -204,6 +204,60 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/tipe_c.dir/build.make CMakeFiles/tipe_c.dir/main.c.s
 .PHONY : main.c.s
 
+suffix_array/clist.o: suffix_array/clist.c.o
+
+.PHONY : suffix_array/clist.o
+
+# target to build an object file
+suffix_array/clist.c.o:
+	$(MAKE) -f CMakeFiles/tipe_c.dir/build.make CMakeFiles/tipe_c.dir/suffix_array/clist.c.o
+.PHONY : suffix_array/clist.c.o
+
+suffix_array/clist.i: suffix_array/clist.c.i
+
+.PHONY : suffix_array/clist.i
+
+# target to preprocess a source file
+suffix_array/clist.c.i:
+	$(MAKE) -f CMakeFiles/tipe_c.dir/build.make CMakeFiles/tipe_c.dir/suffix_array/clist.c.i
+.PHONY : suffix_array/clist.c.i
+
+suffix_array/clist.s: suffix_array/clist.c.s
+
+.PHONY : suffix_array/clist.s
+
+# target to generate assembly for a file
+suffix_array/clist.c.s:
+	$(MAKE) -f CMakeFiles/tipe_c.dir/build.make CMakeFiles/tipe_c.dir/suffix_array/clist.c.s
+.PHONY : suffix_array/clist.c.s
+
+suffix_array/suffix_array.o: suffix_array/suffix_array.c.o
+
+.PHONY : suffix_array/suffix_array.o
+
+# target to build an object file
+suffix_array/suffix_array.c.o:
+	$(MAKE) -f CMakeFiles/tipe_c.dir/build.make CMakeFiles/tipe_c.dir/suffix_array/suffix_array.c.o
+.PHONY : suffix_array/suffix_array.c.o
+
+suffix_array/suffix_array.i: suffix_array/suffix_array.c.i
+
+.PHONY : suffix_array/suffix_array.i
+
+# target to preprocess a source file
+suffix_array/suffix_array.c.i:
+	$(MAKE) -f CMakeFiles/tipe_c.dir/build.make CMakeFiles/tipe_c.dir/suffix_array/suffix_array.c.i
+.PHONY : suffix_array/suffix_array.c.i
+
+suffix_array/suffix_array.s: suffix_array/suffix_array.c.s
+
+.PHONY : suffix_array/suffix_array.s
+
+# target to generate assembly for a file
+suffix_array/suffix_array.c.s:
+	$(MAKE) -f CMakeFiles/tipe_c.dir/build.make CMakeFiles/tipe_c.dir/suffix_array/suffix_array.c.s
+.PHONY : suffix_array/suffix_array.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -222,6 +276,12 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... suffix_array/clist.o"
+	@echo "... suffix_array/clist.i"
+	@echo "... suffix_array/clist.s"
+	@echo "... suffix_array/suffix_array.o"
+	@echo "... suffix_array/suffix_array.i"
+	@echo "... suffix_array/suffix_array.s"
 .PHONY : help
 
 

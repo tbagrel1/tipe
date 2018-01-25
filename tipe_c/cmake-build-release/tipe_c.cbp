@@ -93,6 +93,18 @@
 		<Unit filename="/home/thomas/Drive/tbagrel/courses/courses_2017_2018/tipe/tipe_c/main.c">
 			<Option target="tipe_c"/>
 		</Unit>
+		<Unit filename="/home/thomas/Drive/tbagrel/courses/courses_2017_2018/tipe/tipe_c/suffix_array/clist.c">
+			<Option target="tipe_c"/>
+		</Unit>
+		<Unit filename="/home/thomas/Drive/tbagrel/courses/courses_2017_2018/tipe/tipe_c/suffix_array/clist.h">
+			<Option target="tipe_c"/>
+		</Unit>
+		<Unit filename="/home/thomas/Drive/tbagrel/courses/courses_2017_2018/tipe/tipe_c/suffix_array/suffix_array.c">
+			<Option target="tipe_c"/>
+		</Unit>
+		<Unit filename="/home/thomas/Drive/tbagrel/courses/courses_2017_2018/tipe/tipe_c/suffix_array/suffix_array.h">
+			<Option target="tipe_c"/>
+		</Unit>
 		<Unit filename="/home/thomas/Drive/tbagrel/courses/courses_2017_2018/tipe/tipe_c/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

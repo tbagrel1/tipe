@@ -129,11 +129,61 @@ CMakeFiles/tipe_c.dir/bwt_2_launcher.c.o.provides: CMakeFiles/tipe_c.dir/bwt_2_l
 CMakeFiles/tipe_c.dir/bwt_2_launcher.c.o.provides.build: CMakeFiles/tipe_c.dir/bwt_2_launcher.c.o
 
 
+CMakeFiles/tipe_c.dir/suffix_array/clist.c.o: CMakeFiles/tipe_c.dir/flags.make
+CMakeFiles/tipe_c.dir/suffix_array/clist.c.o: ../suffix_array/clist.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/thomas/Drive/tbagrel/courses/courses_2017_2018/tipe/tipe_c/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/tipe_c.dir/suffix_array/clist.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/tipe_c.dir/suffix_array/clist.c.o   -c /home/thomas/Drive/tbagrel/courses/courses_2017_2018/tipe/tipe_c/suffix_array/clist.c
+
+CMakeFiles/tipe_c.dir/suffix_array/clist.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/tipe_c.dir/suffix_array/clist.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/thomas/Drive/tbagrel/courses/courses_2017_2018/tipe/tipe_c/suffix_array/clist.c > CMakeFiles/tipe_c.dir/suffix_array/clist.c.i
+
+CMakeFiles/tipe_c.dir/suffix_array/clist.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tipe_c.dir/suffix_array/clist.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/thomas/Drive/tbagrel/courses/courses_2017_2018/tipe/tipe_c/suffix_array/clist.c -o CMakeFiles/tipe_c.dir/suffix_array/clist.c.s
+
+CMakeFiles/tipe_c.dir/suffix_array/clist.c.o.requires:
+
+.PHONY : CMakeFiles/tipe_c.dir/suffix_array/clist.c.o.requires
+
+CMakeFiles/tipe_c.dir/suffix_array/clist.c.o.provides: CMakeFiles/tipe_c.dir/suffix_array/clist.c.o.requires
+	$(MAKE) -f CMakeFiles/tipe_c.dir/build.make CMakeFiles/tipe_c.dir/suffix_array/clist.c.o.provides.build
+.PHONY : CMakeFiles/tipe_c.dir/suffix_array/clist.c.o.provides
+
+CMakeFiles/tipe_c.dir/suffix_array/clist.c.o.provides.build: CMakeFiles/tipe_c.dir/suffix_array/clist.c.o
+
+
+CMakeFiles/tipe_c.dir/suffix_array/suffix_array.c.o: CMakeFiles/tipe_c.dir/flags.make
+CMakeFiles/tipe_c.dir/suffix_array/suffix_array.c.o: ../suffix_array/suffix_array.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/thomas/Drive/tbagrel/courses/courses_2017_2018/tipe/tipe_c/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/tipe_c.dir/suffix_array/suffix_array.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/tipe_c.dir/suffix_array/suffix_array.c.o   -c /home/thomas/Drive/tbagrel/courses/courses_2017_2018/tipe/tipe_c/suffix_array/suffix_array.c
+
+CMakeFiles/tipe_c.dir/suffix_array/suffix_array.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/tipe_c.dir/suffix_array/suffix_array.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/thomas/Drive/tbagrel/courses/courses_2017_2018/tipe/tipe_c/suffix_array/suffix_array.c > CMakeFiles/tipe_c.dir/suffix_array/suffix_array.c.i
+
+CMakeFiles/tipe_c.dir/suffix_array/suffix_array.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tipe_c.dir/suffix_array/suffix_array.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/thomas/Drive/tbagrel/courses/courses_2017_2018/tipe/tipe_c/suffix_array/suffix_array.c -o CMakeFiles/tipe_c.dir/suffix_array/suffix_array.c.s
+
+CMakeFiles/tipe_c.dir/suffix_array/suffix_array.c.o.requires:
+
+.PHONY : CMakeFiles/tipe_c.dir/suffix_array/suffix_array.c.o.requires
+
+CMakeFiles/tipe_c.dir/suffix_array/suffix_array.c.o.provides: CMakeFiles/tipe_c.dir/suffix_array/suffix_array.c.o.requires
+	$(MAKE) -f CMakeFiles/tipe_c.dir/build.make CMakeFiles/tipe_c.dir/suffix_array/suffix_array.c.o.provides.build
+.PHONY : CMakeFiles/tipe_c.dir/suffix_array/suffix_array.c.o.provides
+
+CMakeFiles/tipe_c.dir/suffix_array/suffix_array.c.o.provides.build: CMakeFiles/tipe_c.dir/suffix_array/suffix_array.c.o
+
+
 # Object files for target tipe_c
 tipe_c_OBJECTS = \
 "CMakeFiles/tipe_c.dir/main.c.o" \
 "CMakeFiles/tipe_c.dir/bwt_2.c.o" \
-"CMakeFiles/tipe_c.dir/bwt_2_launcher.c.o"
+"CMakeFiles/tipe_c.dir/bwt_2_launcher.c.o" \
+"CMakeFiles/tipe_c.dir/suffix_array/clist.c.o" \
+"CMakeFiles/tipe_c.dir/suffix_array/suffix_array.c.o"
 
 # External object files for target tipe_c
 tipe_c_EXTERNAL_OBJECTS =
@@ -141,9 +191,11 @@ tipe_c_EXTERNAL_OBJECTS =
 tipe_c: CMakeFiles/tipe_c.dir/main.c.o
 tipe_c: CMakeFiles/tipe_c.dir/bwt_2.c.o
 tipe_c: CMakeFiles/tipe_c.dir/bwt_2_launcher.c.o
+tipe_c: CMakeFiles/tipe_c.dir/suffix_array/clist.c.o
+tipe_c: CMakeFiles/tipe_c.dir/suffix_array/suffix_array.c.o
 tipe_c: CMakeFiles/tipe_c.dir/build.make
 tipe_c: CMakeFiles/tipe_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/thomas/Drive/tbagrel/courses/courses_2017_2018/tipe/tipe_c/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable tipe_c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/thomas/Drive/tbagrel/courses/courses_2017_2018/tipe/tipe_c/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable tipe_c"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tipe_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -154,6 +206,8 @@ CMakeFiles/tipe_c.dir/build: tipe_c
 CMakeFiles/tipe_c.dir/requires: CMakeFiles/tipe_c.dir/main.c.o.requires
 CMakeFiles/tipe_c.dir/requires: CMakeFiles/tipe_c.dir/bwt_2.c.o.requires
 CMakeFiles/tipe_c.dir/requires: CMakeFiles/tipe_c.dir/bwt_2_launcher.c.o.requires
+CMakeFiles/tipe_c.dir/requires: CMakeFiles/tipe_c.dir/suffix_array/clist.c.o.requires
+CMakeFiles/tipe_c.dir/requires: CMakeFiles/tipe_c.dir/suffix_array/suffix_array.c.o.requires
 
 .PHONY : CMakeFiles/tipe_c.dir/requires
 

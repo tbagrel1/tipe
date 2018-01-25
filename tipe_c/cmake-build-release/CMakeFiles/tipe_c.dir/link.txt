@@ -1,1 +1,1 @@
-/usr/bin/cc -O3 -DNDEBUG   CMakeFiles/tipe_c.dir/main.c.o CMakeFiles/tipe_c.dir/bwt_2.c.o CMakeFiles/tipe_c.dir/bwt_2_launcher.c.o  -o tipe_c 
+/usr/bin/cc -O3 -DNDEBUG   CMakeFiles/tipe_c.dir/main.c.o CMakeFiles/tipe_c.dir/bwt_2.c.o CMakeFiles/tipe_c.dir/bwt_2_launcher.c.o CMakeFiles/tipe_c.dir/suffix_array/clist.c.o CMakeFiles/tipe_c.dir/suffix_array/suffix_array.c.o  -o tipe_c 
