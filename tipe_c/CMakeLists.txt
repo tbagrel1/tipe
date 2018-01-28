@@ -12,5 +12,5 @@ add_executable(
 )
 
 add_executable(
-    suffix_array_exe suffix_array/main_suffix_array.c suffix_array/suffix_array.c suffix_array/suffix_array.h suffix_array/clist.c suffix_array/clist.h
+    suffix_array_exe suffix_array/main_suffix_array.c suffix_array/suffix_array.c suffix_array/suffix_array.h suffix_array/clist.c suffix_array/clist.h suffix_array/sais.c suffix_array/sais.h
 )

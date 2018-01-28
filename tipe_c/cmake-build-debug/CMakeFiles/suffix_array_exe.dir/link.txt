@@ -1,1 +1,1 @@
-/usr/bin/cc -g   CMakeFiles/suffix_array_exe.dir/suffix_array/main_suffix_array.c.o CMakeFiles/suffix_array_exe.dir/suffix_array/suffix_array.c.o CMakeFiles/suffix_array_exe.dir/suffix_array/clist.c.o  -o suffix_array_exe 
+/usr/bin/cc -g   CMakeFiles/suffix_array_exe.dir/suffix_array/main_suffix_array.c.o CMakeFiles/suffix_array_exe.dir/suffix_array/suffix_array.c.o CMakeFiles/suffix_array_exe.dir/suffix_array/clist.c.o CMakeFiles/suffix_array_exe.dir/suffix_array/sais.c.o  -o suffix_array_exe 

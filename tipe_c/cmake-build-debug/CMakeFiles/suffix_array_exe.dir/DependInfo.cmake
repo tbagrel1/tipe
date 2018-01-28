@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/home/thomas/Drive/tbagrel/courses/courses_2017_2018/tipe/tipe_c/suffix_array/clist.c" "/home/thomas/Drive/tbagrel/courses/courses_2017_2018/tipe/tipe_c/cmake-build-debug/CMakeFiles/suffix_array_exe.dir/suffix_array/clist.c.o"
   "/home/thomas/Drive/tbagrel/courses/courses_2017_2018/tipe/tipe_c/suffix_array/main_suffix_array.c" "/home/thomas/Drive/tbagrel/courses/courses_2017_2018/tipe/tipe_c/cmake-build-debug/CMakeFiles/suffix_array_exe.dir/suffix_array/main_suffix_array.c.o"
+  "/home/thomas/Drive/tbagrel/courses/courses_2017_2018/tipe/tipe_c/suffix_array/sais.c" "/home/thomas/Drive/tbagrel/courses/courses_2017_2018/tipe/tipe_c/cmake-build-debug/CMakeFiles/suffix_array_exe.dir/suffix_array/sais.c.o"
   "/home/thomas/Drive/tbagrel/courses/courses_2017_2018/tipe/tipe_c/suffix_array/suffix_array.c" "/home/thomas/Drive/tbagrel/courses/courses_2017_2018/tipe/tipe_c/cmake-build-debug/CMakeFiles/suffix_array_exe.dir/suffix_array/suffix_array.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")

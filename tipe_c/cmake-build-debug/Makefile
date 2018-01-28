@@ -311,6 +311,33 @@ suffix_array/main_suffix_array.c.s:
 	$(MAKE) -f CMakeFiles/suffix_array_exe.dir/build.make CMakeFiles/suffix_array_exe.dir/suffix_array/main_suffix_array.c.s
 .PHONY : suffix_array/main_suffix_array.c.s
 
+suffix_array/sais.o: suffix_array/sais.c.o
+
+.PHONY : suffix_array/sais.o
+
+# target to build an object file
+suffix_array/sais.c.o:
+	$(MAKE) -f CMakeFiles/suffix_array_exe.dir/build.make CMakeFiles/suffix_array_exe.dir/suffix_array/sais.c.o
+.PHONY : suffix_array/sais.c.o
+
+suffix_array/sais.i: suffix_array/sais.c.i
+
+.PHONY : suffix_array/sais.i
+
+# target to preprocess a source file
+suffix_array/sais.c.i:
+	$(MAKE) -f CMakeFiles/suffix_array_exe.dir/build.make CMakeFiles/suffix_array_exe.dir/suffix_array/sais.c.i
+.PHONY : suffix_array/sais.c.i
+
+suffix_array/sais.s: suffix_array/sais.c.s
+
+.PHONY : suffix_array/sais.s
+
+# target to generate assembly for a file
+suffix_array/sais.c.s:
+	$(MAKE) -f CMakeFiles/suffix_array_exe.dir/build.make CMakeFiles/suffix_array_exe.dir/suffix_array/sais.c.s
+.PHONY : suffix_array/sais.c.s
+
 suffix_array/suffix_array.o: suffix_array/suffix_array.c.o
 
 .PHONY : suffix_array/suffix_array.o
@@ -367,6 +394,9 @@ help:
 	@echo "... suffix_array/main_suffix_array.o"
 	@echo "... suffix_array/main_suffix_array.i"
 	@echo "... suffix_array/main_suffix_array.s"
+	@echo "... suffix_array/sais.o"
+	@echo "... suffix_array/sais.i"
+	@echo "... suffix_array/sais.s"
 	@echo "... suffix_array/suffix_array.o"
 	@echo "... suffix_array/suffix_array.i"
 	@echo "... suffix_array/suffix_array.s"
