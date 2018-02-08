@@ -4,13 +4,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef int8_t index_t;
+#define TRUE 1
+#define FALSE 0
+
+#define MIN_BUCKET_SIZE 256
+
+typedef int32_t index_t;
 typedef unsigned char char_t;
 typedef char bool_t;
 typedef index_t *array;
 typedef index_t const *const_array;
 typedef char_t *str;
 typedef char_t const *const_str;
+typedef unsigned int flag_t;
 
 /*
  * T -> data
@@ -28,11 +34,11 @@ typedef char_t const *const_str;
  * Computes the number of each char in the specified string.
  * @param data_size size of the input string in char_t unit
  * @param data input string
- * @param counts output array for counts
  * @param alphabet_size size of the alphabet
+ * @param counts output array for counts
  */
 void get_counts(
-    index_t data_size, const_str data, array counts, index_t alphabet_size);
+    index_t data_size, const_str data, index_t alphabet_size, array counts);
 
 /**
  * Computes start or end of each bucket (switch with mode_end param).

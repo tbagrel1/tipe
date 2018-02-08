@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/thomas/Bureau/sais-2.4.1/lib/sais.c
+sais_config.h
+/home/thomas/Bureau/sais-2.4.1/lib/sais_config.h
+stdio.h
+-
+stdlib.h
+-
+sais.h
+/home/thomas/Bureau/sais-2.4.1/lib/sais.h
+sais_n.i
+/home/thomas/Bureau/sais-2.4.1/lib/sais_n.i
+
+/home/thomas/Bureau/sais-2.4.1/lib/sais_n.i
+
+lib/../include/sais.h
+inttypes.h
+-
+
+lib/../include/sais_config.h
+

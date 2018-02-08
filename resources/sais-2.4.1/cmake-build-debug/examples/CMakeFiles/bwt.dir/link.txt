@@ -1,0 +1,1 @@
+/usr/bin/cc  -Wall -g  -rdynamic CMakeFiles/bwt.dir/bwt.o  -o bwt  -L/home/thomas/Drive/tbagrel/courses/courses_2017_2018/tipe/resources/sais-2.4.1/cmake-build-debug/examples/../lib -Wl,-rpath,/home/thomas/Drive/tbagrel/courses/courses_2017_2018/tipe/resources/sais-2.4.1/cmake-build-debug/examples/../lib ../lib/libsais.a 
