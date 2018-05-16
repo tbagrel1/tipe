@@ -1,10 +1,5 @@
 #include "arithmetic_coder.h"
 
-// TODO ERROR IF TOO LOW PROB
-
-void dis__printf() {
-}
-
 /**
  * ArithmeticCodingHolder constructor. Returns a new instance of the struct.
  * @return a new instance of ArithmeticCodingHolder
@@ -43,11 +38,6 @@ void arithmeticcoding__encode(
     prob_t alpha = prev_min + escape_prob * (prev_max - prev_min);
     prob_t beta = alpha + (1 - one_prob) * (prev_max - alpha);
     prob_t new_max, new_min;
-    dis__printf("one_prob: %" PRIprob_t "\n", one_prob);
-    dis__printf(
-        "b: %" PRIbit_t " min: %" PRIacode_t " max: %" PRIacode_t
-        "alpha: %" PRIprob_t " beta: %" PRIprob_t "\n", bit, prev_min,
-        prev_max, alpha, beta);
     if (bit == ESCAPE_CHAR) {
         new_min = SGREATER(prev_min);
         new_max = SLOWER(alpha);
@@ -63,20 +53,14 @@ void arithmeticcoding__encode(
         new_max > MAX_ACODE ||
         new_min < 0 ||
         new_min > MAX_ACODE) {
-        dis__printf("too short -> canceled: ");
-        acode_t code = prev_max;
-        dis__printf("%" PRIacode_t "\n", code);
         acode_t_vect__add(
-            p_output->codes, code);
+            p_output->codes, prev_max);
         p_output->current_pos++;
         arithmeticcoding__reset_min_max(p_output);
         arithmeticcoding__encode(p_output, one_prob, escape_prob, bit);
     } else {
         p_output->current_min = (acode_t) (new_min);
         p_output->current_max = (acode_t) (new_max);
-        dis__printf(
-            "new_min: %" PRIacode_t " new_max: %" PRIacode_t "\n",
-            p_output->current_min, p_output->current_max);
     }
 }
 
@@ -87,24 +71,20 @@ void arithmeticcoding__encode(
  */
 acode_t_vect *
 arithmeticcoding__to_out_format(ArithmeticCodingHolder *p_output) {
-    dis__printf(
-        "current_min: %" PRIacode_t " current_max: %" PRIacode_t "\n",
-        p_output->current_min, p_output->current_max);
     acode_t_vect__add(
         p_output->codes, AVG(p_output->current_min, p_output->current_max));
-    dis__printf(
-        "code: %" PRIacode_t "\n",
-        AVG(p_output->current_min, p_output->current_max));
     acode_t_vect__add(
         p_output->codes, p_output->current_max - p_output->current_min);
-    dis__printf(
-        "delta: %" PRIacode_t "\n",
-        p_output->current_max - p_output->current_min);
     acode_t_vect *p_result = p_output->codes;
     arithmeticcoding__free(p_output);
     return p_result;
 }
 
+/**
+ * Creates a holder struct from the speicifed acode_t vect.
+ * @param p_result the acode_t vect to create the holder struct from
+ * @return a holder struct
+ */
 ArithmeticCodingHolder *
 arithmeticcoding__from_out_format(acode_t_vect *p_result) {
     ArithmeticCodingHolder *p_output = arithmeticcoding__new();
@@ -124,16 +104,13 @@ bit_t arithmeticcoding__decode(
     ArithmeticCodingHolder *p_output, prob_t one_prob, prob_t escape_prob) {
     index_t size = p_output->codes->_size;
     if (p_output->current_pos == size - 1) {
-        dis__printf("reached the end\n");
         return BIT_STOP;
     }
     if (p_output->current_pos == size - 2) {
-        dis__printf("last one -> special\n");
         return _arithmeticcoding__decode_until(
             p_output, one_prob, escape_prob, acode_t_vect__get(
                 p_output->codes, size - 1));
     }
-    dis__printf("regular one\n");
     return _arithmeticcoding__decode_until(p_output, one_prob, escape_prob, 0);
 }
 
@@ -147,11 +124,6 @@ bit_t _arithmeticcoding__decode_until(
     prob_t beta = alpha + (prev_max - alpha) * (1 - one_prob);
     prob_t new_max, new_min;
     bit_t bit = BIT_ERROR;
-    dis__printf(
-        "oneprob: %" PRIprob_t
-        " code: %" PRIacode_t " prev_min: %" PRIacode_t " prev_max: %"
-        PRIacode_t " alpha: %" PRIprob_t " beta: %" PRIprob_t "\n", one_prob,
-        code, prev_min, prev_max, alpha, beta);
     if (code >= prev_min && code < alpha) {
         bit = ESCAPE_CHAR;
         new_min = SGREATER(prev_min);
@@ -166,7 +138,6 @@ bit_t _arithmeticcoding__decode_until(
         new_max = SLOWER(prev_max);
     }
     if (code == prev_max || new_max - new_min < delta_stop) {
-        dis__printf("too short -> canceled\n");
         // If it should stop
         p_output->current_pos++;
         arithmeticcoding__reset_min_max(p_output);
@@ -174,9 +145,6 @@ bit_t _arithmeticcoding__decode_until(
     } else {
         p_output->current_min = (acode_t) (new_min);
         p_output->current_max = (acode_t) (new_max);
-        dis__printf(
-            "new_min: %" PRIacode_t " new_max: %" PRIacode_t " bit: %"
-            PRIbit_t "\n", p_output->current_min, p_output->current_max, bit);
         return bit;
     }
 }

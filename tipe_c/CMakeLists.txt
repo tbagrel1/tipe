@@ -17,6 +17,6 @@ add_executable(
 add_executable(
     bitwise_ppm_exe bitwise_ppm/main_bitwise_ppm.c bitwise_ppm/bitwise_ppm.c bitwise_ppm/bitwise_ppm.h
     bitwise_ppm/arithmetic_coder.c bitwise_ppm/arithmetic_coder.h
-    bitwise_ppm/defs.h bitwise_ppm/defs.c bitwise_ppm/cvector_core.h
-    bitwise_ppm/cvector_interface.h)
+    bitwise_ppm/defs.h bitwise_ppm/cvector_core.h
+    bitwise_ppm/cvector_interface.h bitwise_ppm/bitwise_ppm_handler.c bitwise_ppm/bitwise_ppm_handler.h bitwise_ppm/acode_t_vect.c bitwise_ppm/acode_t_vect.h)
 target_link_libraries(bitwise_ppm_exe m)

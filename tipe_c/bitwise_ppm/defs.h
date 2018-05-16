@@ -7,7 +7,10 @@
 #include <stdbool.h>
 #include <math.h>
 
+#include "acode_t_vect.h"
+
 #define MAX_ORDER 3
+
 #define BYTE_SIZE 8
 #define INIT_OCCS 4
 
@@ -23,9 +26,6 @@ typedef uint8_t bit_t;
 typedef uint32_t context_t;
 #define PRIcontext_t PRIu32
 
-typedef uint32_t acode_t;
-#define PRIacode_t PRIu32
-
 #define MAX_ACODE ((acode_t) (-1))
 #define SLOWER(x) \
     (ceil(x) - 1.0)
@@ -40,16 +40,6 @@ typedef uint32_t acode_t;
 
 #define BIT_STOP ((bit_t) (2))
 #define BIT_ERROR ((bit_t) (3))
-
-#ifndef DEF_ACODE_T_VECT
-#define DEF_ACODE_T_VECT
-
-#define CVECTOR_T acode_t
-#define CVECTOR_DEFAULT_VALUE 0
-
-#include "cvector_interface.h"
-
-#endif  // DEF_ACODE_T_VECT
 
 typedef struct ModelCell {
     prob_t one_prob;

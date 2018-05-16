@@ -198,6 +198,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/thomas/Drive/tbagrel/courses/courses_2017_2018/tipe/tipe_c/bitwise_ppm/acode_t_vect.c">
+			<Option target="bitwise_ppm_exe"/>
+		</Unit>
+		<Unit filename="/home/thomas/Drive/tbagrel/courses/courses_2017_2018/tipe/tipe_c/bitwise_ppm/acode_t_vect.h">
+			<Option target="bitwise_ppm_exe"/>
+		</Unit>
 		<Unit filename="/home/thomas/Drive/tbagrel/courses/courses_2017_2018/tipe/tipe_c/bitwise_ppm/arithmetic_coder.c">
 			<Option target="bitwise_ppm_exe"/>
 		</Unit>
@@ -210,13 +216,16 @@
 		<Unit filename="/home/thomas/Drive/tbagrel/courses/courses_2017_2018/tipe/tipe_c/bitwise_ppm/bitwise_ppm.h">
 			<Option target="bitwise_ppm_exe"/>
 		</Unit>
+		<Unit filename="/home/thomas/Drive/tbagrel/courses/courses_2017_2018/tipe/tipe_c/bitwise_ppm/bitwise_ppm_handler.c">
+			<Option target="bitwise_ppm_exe"/>
+		</Unit>
+		<Unit filename="/home/thomas/Drive/tbagrel/courses/courses_2017_2018/tipe/tipe_c/bitwise_ppm/bitwise_ppm_handler.h">
+			<Option target="bitwise_ppm_exe"/>
+		</Unit>
 		<Unit filename="/home/thomas/Drive/tbagrel/courses/courses_2017_2018/tipe/tipe_c/bitwise_ppm/cvector_core.h">
 			<Option target="bitwise_ppm_exe"/>
 		</Unit>
 		<Unit filename="/home/thomas/Drive/tbagrel/courses/courses_2017_2018/tipe/tipe_c/bitwise_ppm/cvector_interface.h">
-			<Option target="bitwise_ppm_exe"/>
-		</Unit>
-		<Unit filename="/home/thomas/Drive/tbagrel/courses/courses_2017_2018/tipe/tipe_c/bitwise_ppm/defs.c">
 			<Option target="bitwise_ppm_exe"/>
 		</Unit>
 		<Unit filename="/home/thomas/Drive/tbagrel/courses/courses_2017_2018/tipe/tipe_c/bitwise_ppm/defs.h">

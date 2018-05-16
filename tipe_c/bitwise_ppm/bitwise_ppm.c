@@ -84,16 +84,10 @@ void update_one_prob(
     ModelCell
         *p_cell =
         &(p_model_holder->model_orders[order].model_cells[s_context]);
-    dis__printf(
-        "#called# prev_one_prob %" PRIprob_t " prev_total_occs %"
-        PRIcount_t, p_cell->one_prob, p_cell->total_occs);
     p_cell->one_prob =
         (p_cell->one_prob * p_cell->total_occs + bit) /
         (p_cell->total_occs + 1);
     p_cell->total_occs += 1;
-    dis__printf(
-        " new_one_prob %" PRIprob_t " new_total_occs %"
-        PRIcount_t "\n", p_cell->one_prob, p_cell->total_occs);
 }
 
 /**
@@ -108,7 +102,6 @@ void encode(
     context_t context, bit_t bit) {
     size_t order = MAX_ORDER;
     context = context & ((1U << (BYTE_SIZE * order)) - 1);
-    dis__printf("context: %" PRIcontext_t " order: %lu\n", context, order);
     ModelCell
         *p_cell = &(p_model_holder->model_orders[order].model_cells[context]);
     while (p_cell->total_occs == 0) {
@@ -121,7 +114,6 @@ void encode(
         order--;
         context = context & ((1U << (BYTE_SIZE * order)) - 1);
         p_cell = &(p_model_holder->model_orders[order].model_cells[context]);
-        dis__printf("context: %" PRIcontext_t " order: %lu\n", context, order);
     }
     // Correct order found
     arithmeticcoding__encode(
@@ -143,7 +135,6 @@ bit_t decode(
     context_t context) {
     size_t order = MAX_ORDER;
     context = context & ((1U << (BYTE_SIZE * order)) - 1);
-    dis__printf("context: %" PRIcontext_t " order: %lu\n", context, order);
     ModelCell
         *p_cell = &(p_model_holder->model_orders[order].model_cells[context]);
     bit_t bit;
@@ -158,7 +149,6 @@ bit_t decode(
         order--;
         context = context & ((1U << (BYTE_SIZE * order)) - 1);
         p_cell = &(p_model_holder->model_orders[order].model_cells[context]);
-        dis__printf("context: %" PRIcontext_t " order: %lu\n", context, order);
     }
     for (size_t i_order = MAX_ORDER; i_order > order; i_order--) {
         init_one_prob(p_model_holder, i_order, contexts[i_order], bit);

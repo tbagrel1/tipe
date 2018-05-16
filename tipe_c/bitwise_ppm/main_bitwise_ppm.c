@@ -2,8 +2,10 @@
 #include <stdlib.h>
 #include <time.h>
 
-#include "bitwise_ppm.h"
-#include "arithmetic_coder.h"
+#include "bitwise_ppm_handler.h"
+// #define TEST_RANDOM
+
+#ifdef TEST_RANDOM
 
 #define TEST_LENGTH 1000000
 
@@ -25,8 +27,9 @@ int main(int argc, char **argv) {
         encode(my_coder, my_model_enc, my_context, my_bit);
         my_context = (my_context << 1U) | my_bit;
     }
-    my_coder = arithmeticcoding__from_out_format(
-        arithmeticcoding__to_out_format(my_coder));
+    my_coder =
+        arithmeticcoding__from_out_format(
+            arithmeticcoding__to_out_format(my_coder));
     // printf("--------------------\n--------------------\n");
     size_t i = 0;
     my_context = 0;
@@ -42,3 +45,36 @@ int main(int argc, char **argv) {
     printf("Ok");
     return 0;
 }
+
+#else
+
+typedef char * str;
+bool str_eq(str a, str b) {
+    size_t i = 0;
+    while (a[i] != '\0' && b[i] != '\0' && a[i] == b[i]) {
+        i++;
+    }
+    return (a[i] == '\0' && b[i] == '\0');
+}
+
+int main(int argc, char **argv) {
+    // Not secured at all
+    str mode = argv[1];
+    str in_path = argv[2];
+    str out_path = argv[3];
+    size_t probs_length = argc - 4;
+    prob_t *escape_probs = malloc(sizeof(prob_t) * probs_length);
+    for (size_t i = 0; i < probs_length; i++) {
+        sscanf(argv[4 + i], "%lf", escape_probs + i);
+    }
+    if (str_eq(mode, "enc")) {
+        encode_file(in_path, out_path, escape_probs);
+    } else if (str_eq(mode, "dec")) {
+        decode_file(in_path, out_path, escape_probs);
+    } else {
+        return 1;
+    }
+    return 0;
+}
+
+#endif

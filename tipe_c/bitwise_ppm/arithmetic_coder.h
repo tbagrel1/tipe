@@ -3,8 +3,6 @@
 
 #include "defs.h"
 
-void dis__printf();
-
 ArithmeticCodingHolder *arithmeticcoding__new();
 
 void arithmeticcoding__encode(

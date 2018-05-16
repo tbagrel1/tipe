@@ -162,6 +162,33 @@ bitwise_ppm_exe/fast:
 	$(MAKE) -f CMakeFiles/bitwise_ppm_exe.dir/build.make CMakeFiles/bitwise_ppm_exe.dir/build
 .PHONY : bitwise_ppm_exe/fast
 
+bitwise_ppm/acode_t_vect.o: bitwise_ppm/acode_t_vect.c.o
+
+.PHONY : bitwise_ppm/acode_t_vect.o
+
+# target to build an object file
+bitwise_ppm/acode_t_vect.c.o:
+	$(MAKE) -f CMakeFiles/bitwise_ppm_exe.dir/build.make CMakeFiles/bitwise_ppm_exe.dir/bitwise_ppm/acode_t_vect.c.o
+.PHONY : bitwise_ppm/acode_t_vect.c.o
+
+bitwise_ppm/acode_t_vect.i: bitwise_ppm/acode_t_vect.c.i
+
+.PHONY : bitwise_ppm/acode_t_vect.i
+
+# target to preprocess a source file
+bitwise_ppm/acode_t_vect.c.i:
+	$(MAKE) -f CMakeFiles/bitwise_ppm_exe.dir/build.make CMakeFiles/bitwise_ppm_exe.dir/bitwise_ppm/acode_t_vect.c.i
+.PHONY : bitwise_ppm/acode_t_vect.c.i
+
+bitwise_ppm/acode_t_vect.s: bitwise_ppm/acode_t_vect.c.s
+
+.PHONY : bitwise_ppm/acode_t_vect.s
+
+# target to generate assembly for a file
+bitwise_ppm/acode_t_vect.c.s:
+	$(MAKE) -f CMakeFiles/bitwise_ppm_exe.dir/build.make CMakeFiles/bitwise_ppm_exe.dir/bitwise_ppm/acode_t_vect.c.s
+.PHONY : bitwise_ppm/acode_t_vect.c.s
+
 bitwise_ppm/arithmetic_coder.o: bitwise_ppm/arithmetic_coder.c.o
 
 .PHONY : bitwise_ppm/arithmetic_coder.o
@@ -216,32 +243,32 @@ bitwise_ppm/bitwise_ppm.c.s:
 	$(MAKE) -f CMakeFiles/bitwise_ppm_exe.dir/build.make CMakeFiles/bitwise_ppm_exe.dir/bitwise_ppm/bitwise_ppm.c.s
 .PHONY : bitwise_ppm/bitwise_ppm.c.s
 
-bitwise_ppm/defs.o: bitwise_ppm/defs.c.o
+bitwise_ppm/bitwise_ppm_handler.o: bitwise_ppm/bitwise_ppm_handler.c.o
 
-.PHONY : bitwise_ppm/defs.o
+.PHONY : bitwise_ppm/bitwise_ppm_handler.o
 
 # target to build an object file
-bitwise_ppm/defs.c.o:
-	$(MAKE) -f CMakeFiles/bitwise_ppm_exe.dir/build.make CMakeFiles/bitwise_ppm_exe.dir/bitwise_ppm/defs.c.o
-.PHONY : bitwise_ppm/defs.c.o
+bitwise_ppm/bitwise_ppm_handler.c.o:
+	$(MAKE) -f CMakeFiles/bitwise_ppm_exe.dir/build.make CMakeFiles/bitwise_ppm_exe.dir/bitwise_ppm/bitwise_ppm_handler.c.o
+.PHONY : bitwise_ppm/bitwise_ppm_handler.c.o
 
-bitwise_ppm/defs.i: bitwise_ppm/defs.c.i
+bitwise_ppm/bitwise_ppm_handler.i: bitwise_ppm/bitwise_ppm_handler.c.i
 
-.PHONY : bitwise_ppm/defs.i
+.PHONY : bitwise_ppm/bitwise_ppm_handler.i
 
 # target to preprocess a source file
-bitwise_ppm/defs.c.i:
-	$(MAKE) -f CMakeFiles/bitwise_ppm_exe.dir/build.make CMakeFiles/bitwise_ppm_exe.dir/bitwise_ppm/defs.c.i
-.PHONY : bitwise_ppm/defs.c.i
+bitwise_ppm/bitwise_ppm_handler.c.i:
+	$(MAKE) -f CMakeFiles/bitwise_ppm_exe.dir/build.make CMakeFiles/bitwise_ppm_exe.dir/bitwise_ppm/bitwise_ppm_handler.c.i
+.PHONY : bitwise_ppm/bitwise_ppm_handler.c.i
 
-bitwise_ppm/defs.s: bitwise_ppm/defs.c.s
+bitwise_ppm/bitwise_ppm_handler.s: bitwise_ppm/bitwise_ppm_handler.c.s
 
-.PHONY : bitwise_ppm/defs.s
+.PHONY : bitwise_ppm/bitwise_ppm_handler.s
 
 # target to generate assembly for a file
-bitwise_ppm/defs.c.s:
-	$(MAKE) -f CMakeFiles/bitwise_ppm_exe.dir/build.make CMakeFiles/bitwise_ppm_exe.dir/bitwise_ppm/defs.c.s
-.PHONY : bitwise_ppm/defs.c.s
+bitwise_ppm/bitwise_ppm_handler.c.s:
+	$(MAKE) -f CMakeFiles/bitwise_ppm_exe.dir/build.make CMakeFiles/bitwise_ppm_exe.dir/bitwise_ppm/bitwise_ppm_handler.c.s
+.PHONY : bitwise_ppm/bitwise_ppm_handler.c.s
 
 bitwise_ppm/main_bitwise_ppm.o: bitwise_ppm/main_bitwise_ppm.c.o
 
@@ -498,15 +525,18 @@ help:
 	@echo "... bwt_exe"
 	@echo "... suffix_array_exe"
 	@echo "... bitwise_ppm_exe"
+	@echo "... bitwise_ppm/acode_t_vect.o"
+	@echo "... bitwise_ppm/acode_t_vect.i"
+	@echo "... bitwise_ppm/acode_t_vect.s"
 	@echo "... bitwise_ppm/arithmetic_coder.o"
 	@echo "... bitwise_ppm/arithmetic_coder.i"
 	@echo "... bitwise_ppm/arithmetic_coder.s"
 	@echo "... bitwise_ppm/bitwise_ppm.o"
 	@echo "... bitwise_ppm/bitwise_ppm.i"
 	@echo "... bitwise_ppm/bitwise_ppm.s"
-	@echo "... bitwise_ppm/defs.o"
-	@echo "... bitwise_ppm/defs.i"
-	@echo "... bitwise_ppm/defs.s"
+	@echo "... bitwise_ppm/bitwise_ppm_handler.o"
+	@echo "... bitwise_ppm/bitwise_ppm_handler.i"
+	@echo "... bitwise_ppm/bitwise_ppm_handler.s"
 	@echo "... bitwise_ppm/main_bitwise_ppm.o"
 	@echo "... bitwise_ppm/main_bitwise_ppm.i"
 	@echo "... bitwise_ppm/main_bitwise_ppm.s"
