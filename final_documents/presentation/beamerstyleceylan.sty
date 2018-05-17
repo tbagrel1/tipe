@@ -1,0 +1,94 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{beamerstyleceylan}[2018-02-26 Ceylan Style for Beamer]
+\usefonttheme{professionalfonts}
+\usefonttheme[onlymath]{serif}
+\RequirePackage{inconsolata}
+\RequirePackage[defaultfam,light,tabular,lining]{montserrat}
+\RequirePackage{listings}
+
+\definecolor{extragray}{RGB}{16,21,21}
+\definecolor{supergray}{RGB}{32,37,37}
+\definecolor{regulargray}{RGB}{149,160,160}
+\definecolor{regularblue}{RGB}{64,208,224}
+\definecolor{regulargreen}{RGB}{95,207,180}
+\definecolor{minigray}{RGB}{197,208,208}
+\definecolor{microgray}{RGB}{240,245,245}
+\newcommand{\listingstitleformat}[1]{{\large\sffamily\color{regulargreen} #1}}
+\lstset{
+  basicstyle=\ttfamily\small\color{microgray},
+  stringstyle=\color{regulargray},
+  commentstyle=\itshape\color{regulargreen},
+  identifierstyle=\color{minigray},
+  keywordstyle=\color{regularblue}\bfseries,
+  numberstyle=\ttfamily\footnotesize\color{regulargray},
+  numbers=left,
+  numbersep=10pt,
+  backgroundcolor=\color{supergray},
+  rulecolor=\color{supergray},
+  title=\listingstitleformat{\lstname},
+  breakatwhitespace=true,
+  breaklines=false,
+  captionpos=t,
+  frame=single,
+  keepspaces=true,
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  stepnumber=1,
+  tabsize=4,
+  numberblanklines=false,
+  frameround=ffff,
+}
+\mode<presentation>
+\definecolor{titleColor}{RGB}{16,21,21}
+\definecolor{titleTextColor}{RGB}{64,208,224}
+\definecolor{subtitleTextColor}{RGB}{95,207,180}
+\definecolor{bodyColor}{RGB}{16,21,21}
+\definecolor{normalTextColor}{RGB}{197,208,208}
+\definecolor{exampleTextColor}{RGB}{149,160,160}
+\definecolor{alertTextColor}{RGB}{95,207,180}
+\definecolor{chipColor}{RGB}{21,16,16}
+\definecolor{chipTextColor}{RGB}{64,208,224}
+\definecolor{normalBlockColor}{RGB}{32,37,37}
+\definecolor{normalTitleBlockColor}{RGB}{197,208,208}
+\definecolor{normalBlockTextColor}{RGB}{240,245,245}
+\definecolor{normalBlockTitleTextColor}{RGB}{21,16,16}
+\definecolor{exampleBlockColor}{RGB}{32,37,37}
+\definecolor{exampleTitleBlockColor}{RGB}{149,160,160}
+\definecolor{exampleBlockTextColor}{RGB}{240,245,245}
+\definecolor{exampleBlockTitleTextColor}{RGB}{21,16,16}
+\definecolor{alertBlockColor}{RGB}{32,37,37}
+\definecolor{alertTitleBlockColor}{RGB}{95,207,180}
+\definecolor{alertBlockTextColor}{RGB}{240,245,245}
+\definecolor{alertBlockTitleTextColor}{RGB}{21,16,16}
+\definecolor{structureTextColor}{RGB}{95,207,180}
+\setbeamercolor*{block title}{fg=normalBlockTitleTextColor,bg=normalTitleBlockColor}
+\setbeamercolor*{block body}{fg=normalBlockTextColor,bg=normalBlockColor}
+\setbeamercolor*{block title alerted}{fg=alertBlockTitleTextColor,bg=alertTitleBlockColor}
+\setbeamercolor*{block body alerted}{fg=alertBlockTextColor,bg=alertBlockColor}
+\setbeamercolor*{block title example}{fg=exampleBlockTitleTextColor,bg=exampleTitleBlockColor}
+\setbeamercolor*{block body example}{fg=exampleBlockTextColor,bg=exampleBlockColor}
+\setbeamerfont{block title}{size={}}
+\setbeamercolor{titlelike}{fg=titleTextColor,bg=titleColor}
+\setbeamerfont{titlelike}{family=\ttfamily}
+\setbeamercolor{frametitle}{fg=titleTextColor, bg=titleColor}
+\setbeamercolor{framesubtitle}{fg=subtitleTextColor, bg=titleColor}
+\setbeamerfont{frametitle}{family=\ttfamily, size=\LARGE}
+\setbeamerfont{framesubtitle}{family=\sffamily, size=\small}
+\setbeamercolor*{normal text}{fg=normalTextColor,bg=bodyColor}
+\setbeamercolor*{example text}{fg=exampleTextColor}
+\setbeamercolor*{alerted text}{fg=alertTextColor}
+\useinnertheme{default}
+\setbeamercolor{item projected}{bg=chipColor,fg=chipTextColor}
+\setbeamercolor{structure}{fg=structureTextColor}
+\setbeamerfont{structure}{size=\large}
+\setbeamercolor{title}{fg=titleTextColor}
+\setbeamerfont{title}{family=\ttfamily,size=\huge}
+\setbeamercolor{subtitle}{fg=subtitleTextColor}
+\setbeamerfont{subtitle}{family=\sffamily}
+\setbeamerfont{author}{size=\small}
+\setbeamercolor{button}{fg=structureTextColor}
+\setbeamerfont{button}{family=\ttfamily}
+\setbeamercolor{navigation symbols}{fg=structureTextColor}
+\mode
+<all>

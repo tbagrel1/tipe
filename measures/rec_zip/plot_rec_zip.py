@@ -5,6 +5,7 @@
 
 import json
 import matplotlib.pyplot as plt
+import numpy as np
 
 RESULT_FILE = "rec_zip_measures.txt"
 PLOT_FILE = "rec_zip_measures.png"
@@ -17,13 +18,17 @@ def main():
     init_file_name = experiment["file"]
     spaces = experiment["spaces"]
     plt.figure()
-    plt.plot(range(len(spaces)), spaces, "+-r")
-    plt.xlabel("passes on file \"{}\"".format(init_file_name))
+    plt.style.use('dark_background')
+    plt.plot(range(len(spaces)), spaces, "+-", color=[64/256,208/256,224/256])
+    plt.title(r"rec zip: $\tt{" + init_file_name + r"}$")
+    plt.xlabel("passes")
+    plt.xticks(np.arange(0, len(spaces), 1))
     plt.ylabel("space (bytes)")
     plt.axis([
         0, len(spaces) - 1,
-        min(spaces) - DELTA_WINDOW, max(spaces) + DELTA_WINDOW])
+        0, 4 * 10 ** 6])
     plt.savefig(PLOT_FILE, dpi=300, bbox_inches="tight")
+    plt.show()
 
 if __name__ == "__main__":
     main()
