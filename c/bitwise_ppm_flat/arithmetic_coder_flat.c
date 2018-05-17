@@ -20,7 +20,8 @@ void arithmeticcoding__encode(
     prob_t new_max, new_min;
     prob_t center = prev_min + (1 - one_prob) * (prev_max - prev_min);
     if (bit == ZERO) {
-        new_min = SGREATER(prev_min);
+        // new_min = SGREATER(prev_min);
+        new_min = prev_min;
         new_max = SLOWER(center);
     } else if (bit == ONE) {
         new_min = SGREATER(center);
@@ -90,7 +91,8 @@ bit_t _arithmeticcoding__decode_until(
     bit_t bit = BIT_ERROR;
     if (code >= prev_min && code < center) {
         bit = ZERO;
-        new_min = SGREATER(prev_min);
+        // new_min = SGREATER(prev_min);
+        new_min = prev_min;
         new_max = SLOWER(center);
     } else if (code >= center && code < prev_max) {
         bit = ONE;

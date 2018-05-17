@@ -17,12 +17,12 @@ ZIP_FILE = "calgary_flat.zip"
 JUNK_FILE = "junk.log"
 RAW_SIZE = os.path.getsize(RAW_FILE)
 ZIP_RATIO = os.path.getsize(ZIP_FILE) / RAW_SIZE
-BWT_CMD = "./bwt {} {}".format(RAW_FILE, BWT_FILE)
+BWT_CMD = "./bwt64 {} {}".format(RAW_FILE, BWT_FILE)
 ENC_CMD_PARTIAL = "{} enc {} {} {{}} > {}".format(
     EXE, BWT_FILE, ENC_FILE, JUNK_FILE)
 DEC_CMD_PARTIAL = "{} dec {} {} {{}} > {}".format(
     EXE, ENC_FILE, DEC_FILE, JUNK_FILE)
-UNBWT_CMD = "./unbwt {} {}".format(DEC_FILE, UNBWT_FILE)
+UNBWT_CMD = "./unbwt64 {} {}".format(DEC_FILE, UNBWT_FILE)
 CHECK_CMD = "cmp -s {} {}".format(RAW_FILE, UNBWT_FILE)
 
 def main():
