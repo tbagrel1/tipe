@@ -1,0 +1,222 @@
+calgary.tar
+
+order 1: [0.7287781554383117, [0.0, 4.003844419883847e-05]]
+order 2: [0.5144670758928571, [0.0, 0.0009518432164984182, 0.0027904279715268102]]
+order 3: [0.6484210125811688, [0.0, 0.014321686093617074, 0.07285493421486099,
+0.04824893636793207]]
+
+order 1: [0.7287806919642857, [0.0, 3.8533032766681573e-05]]
+order 2: [0.514462002840909, [0.0, 0.010393130469946988, 0.002793776368376827]]
+order 3: [0.6490285105519481, [0.0, 4.5097597279462256e-05, 0.06536406363888679, 0.050611927799512305]]
+
+calgary_flat.tar
+
+[0]: 1.0140181107954545
+[1]: 1.0023082386363635
+[2]: 0.981242390422078
+[3]: 0.9533570921266233
+[4]: 0.935356635551948
+[5]: 0.9102386870941559
+[6]: 0.8808441558441559
+[7]: 0.7959669237012987
+[8]: 0.7285879159902597
+[9]: 0.6944729099025974
+[10]: 0.6562385856331169
+[11]: 0.6268491274350649
+[12]: 0.5946593445616883
+[13]: 0.5660574776785714
+[14]: 0.5377523843344156
+[15]: 0.514645900974026
+[16]: 0.4869026481331169
+[17]: 0.46477019074675324
+[18]: 0.4445566152597403
+[19]: 0.4306386972402597
+[20]: 0.41841898336038963
+[21]: 0.4086799918831169
+[22]: 0.4000634131493506
+[23]: 0.3922471083603896
+[24]: 0.38449675324675325
+[25]: 0.3810343952922078
+[26]: 0.3785625507305195 <-- Winner: [26]
+[27]: 0.3797775466720779
+[28]: 0.3808898133116883
+
+flat + bwt
+
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1504 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1143 sec
+[0]: 1.0164354200487014
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1518 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1214 sec
+[1]: 1.005071783685065
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1427 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1210 sec
+[2]: 0.9764445515422078
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1438 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1098 sec
+[3]: 0.9464767654220779
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1407 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1217 sec
+[4]: 0.9242390422077922
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1419 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1134 sec
+[5]: 0.8881709111201299
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1401 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1122 sec
+[6]: 0.8542321935876623
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1446 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1314 sec
+[7]: 0.7964577414772728
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1456 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1090 sec
+[8]: 0.512794237012987
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1376 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1166 sec
+[9]: 0.46959466314935067
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1416 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1121 sec
+[10]: 0.4335341416396104
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1432 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1212 sec
+[11]: 0.4190112621753247
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1421 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1119 sec
+[12]: 0.40622590300324674
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1411 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1118 sec
+[13]: 0.39599863027597404
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1420 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1121 sec
+[14]: 0.3867694805194805
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1451 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1218 sec
+[15]: 0.3797318892045455
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1433 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1128 sec
+[16]: 0.3664734679383117
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1424 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1061 sec
+[17]: 0.36311764407467534
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1421 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1157 sec
+[18]: 0.360453023538961
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1418 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1089 sec
+[19]: 0.36005352069805197
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1398 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1140 sec
+[20]: 0.3599330357142857
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1429 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1236 sec
+[21]: 0.36066101866883116
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1458 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1156 sec
+[22]: 0.361720018262987
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1403 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1160 sec
+[23]: 0.36341314935064933
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1435 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1171 sec
+[24]: 0.3627168729707792
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1446 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1162 sec
+[25]: 0.3667385349025974
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1430 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1129 sec
+[26]: 0.37177988027597403
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1444 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1094 sec
+[27]: 0.3787959111201299
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1387 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1133 sec
+[28]: 0.386033887987013
+
+flat + bwt64
+
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1675 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1808 sec
+[0]: 1.0164366883116882
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1570 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1819 sec
+[1]: 1.005074320211039
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1564 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1826 sec
+[2]: 0.9764458198051948
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1576 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1804 sec
+[3]: 0.946475497159091
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1639 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1999 sec
+[4]: 0.9242403104707793
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1922 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1966 sec
+[5]: 0.8881709111201299
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1647 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1884 sec
+[6]: 0.8542321935876623
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1556 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1884 sec
+[7]: 0.7964577414772728
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1653 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1816 sec
+[8]: 0.512794237012987
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1582 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.2197 sec
+[9]: 0.46959466314935067
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1679 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1804 sec
+[10]: 0.4335341416396104
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1576 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1845 sec
+[11]: 0.4190112621753247
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1583 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1835 sec
+[12]: 0.40622590300324674
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1606 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1886 sec
+[13]: 0.39599863027597404
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1590 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1817 sec
+[14]: 0.3867669439935065
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1583 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1808 sec
+[15]: 0.3797318892045455
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1557 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1822 sec
+[16]: 0.3664721996753247
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1546 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1842 sec
+[17]: 0.36312144886363634
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1569 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1813 sec
+[18]: 0.360451755275974
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1639 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.2296 sec
+[19]: 0.36005352069805197
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1587 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1828 sec
+[20]: 0.35993557224025974
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1557 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1845 sec
+[21]: 0.36066101866883116
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1598 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1837 sec
+[22]: 0.361720018262987
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1581 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1847 sec
+[23]: 0.36341314935064933
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1643 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1822 sec
+[24]: 0.3627168729707792
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1573 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1822 sec
+[25]: 0.36673726663961037
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1554 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1802 sec
+[26]: 0.37178114853896105
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1610 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1841 sec
+[27]: 0.37879464285714287
+  BWT (blocksize 3153920) ... 3153920 bytes: 0.1611 sec
+UnBWT (blocksize 3153920) ... 3153920 bytes: 0.1772 sec
+[28]: 0.38603515625

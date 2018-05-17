@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b8692e44-6972-43a3-91b7-3da6fc9c9a26" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/../../tipe_c/bitwise_ppm_flat/acode_t_vect.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../tipe_c/bitwise_ppm_flat/acode_t_vect.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../tipe_c/bitwise_ppm_flat/arithmetic_coder_flat.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../tipe_c/bitwise_ppm_flat/arithmetic_coder_flat.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../tipe_c/bitwise_ppm_flat/bitwise_ppm_flat.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../tipe_c/bitwise_ppm_flat/bitwise_ppm_flat.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../tipe_c/bitwise_ppm_flat/bitwise_ppm_flat_handler.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../tipe_c/bitwise_ppm_flat/bitwise_ppm_flat_handler.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../tipe_c/bitwise_ppm_flat/cvector_core.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../tipe_c/bitwise_ppm_flat/cvector_interface.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../tipe_c/bitwise_ppm_flat/defs.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../tipe_c/bitwise_ppm_flat/main_bitwise_ppm_flat.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../tipe_c/rle/cvector_core.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../tipe_c/rle/cvector_interface.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../tipe_c/rle/main_rle.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../tipe_c/rle/rle_code_t_vect.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../tipe_c/rle/rle_code_t_vect.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../tipe_c/rle/rle_handler.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../tipe_c/rle/rle_handler.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../notes_tipe.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../notes_tipe.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/sais-2.4.1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../resources/sais-2.4.1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/CMakeFiles/CMakeRuleHashes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/CMakeFiles/CMakeRuleHashes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/CMakeFiles/feature_tests.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/CMakeFiles/uninstall.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/CMakeFiles/uninstall.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/CMakeModules/cmake_uninstall.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/CMakeModules/cmake_uninstall.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/CPackConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/CPackConfig.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/CPackSourceConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/CPackSourceConfig.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/examples/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/examples/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/examples/CMakeFiles/bwt.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/examples/CMakeFiles/bwt.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/examples/CMakeFiles/bwt.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/examples/CMakeFiles/bwt.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/examples/CMakeFiles/suftest.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/examples/CMakeFiles/suftest.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/examples/CMakeFiles/suftest.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/examples/CMakeFiles/suftest.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/examples/CMakeFiles/unbwt.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/examples/CMakeFiles/unbwt.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/examples/CMakeFiles/unbwt.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/examples/CMakeFiles/unbwt.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/examples/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/examples/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/examples/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/examples/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/include/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/include/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/include/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/include/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/include/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/include/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/lib/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/lib/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/lib/CMakeFiles/sais.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/lib/CMakeFiles/sais.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/lib/CMakeFiles/sais.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/lib/CMakeFiles/sais.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/lib/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/lib/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/lib/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/lib/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/pkgconfig/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/pkgconfig/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/pkgconfig/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/pkgconfig/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/pkgconfig/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/pkgconfig/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/sais.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../../resources/sais-2.4.1/cmake-build-debug/sais.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bitwise_ppm_genetics.py" beforeDir="false" afterPath="$PROJECT_DIR$/bitwise_ppm_genetics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tipe_c/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../tipe_c/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tipe_c/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../tipe_c/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tipe_c/bitwise_ppm/arithmetic_coder.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../tipe_c/bitwise_ppm/arithmetic_coder.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tipe_c/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../tipe_c/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tipe_c/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../../tipe_c/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tipe_c/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../tipe_c/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tipe_c/cmake-build-debug/CMakeFiles/bwt_exe.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../tipe_c/cmake-build-debug/CMakeFiles/bwt_exe.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tipe_c/cmake-build-debug/CMakeFiles/main_exe.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../tipe_c/cmake-build-debug/CMakeFiles/main_exe.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tipe_c/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/../../tipe_c/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tipe_c/cmake-build-debug/CMakeFiles/suffix_array_exe.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../tipe_c/cmake-build-debug/CMakeFiles/suffix_array_exe.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tipe_c/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../../tipe_c/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tipe_c/cmake-build-debug/tipe_c.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../../tipe_c/cmake-build-debug/tipe_c.cbp" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/bitwise_ppm$bitwise_ppm_flat_bwt.coverage" NAME="bitwise_ppm_flat_bwt Coverage Results" MODIFIED="1526546796862" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bitwise_ppm$bitwise_ppm_flat.coverage" NAME="bitwise_ppm_flat Coverage Results" MODIFIED="1526544952959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bitwise_ppm$bitwise_ppm_genetics.coverage" NAME="bitwise_ppm_genetics Coverage Results" MODIFIED="1526484222776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="bitwise_ppm_flat.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bitwise_ppm_flat.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="32" column="57" selection-start-line="32" selection-start-column="57" selection-end-line="32" selection-end-column="57" />
+              <folding>
+                <element signature="e#106#115#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bitwise_ppm_flat_bwt.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bitwise_ppm_flat_bwt.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="980">
+              <caret line="50" column="10" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="results.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/results.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2640">
+              <caret line="134" lean-forward="true" selection-start-line="134" selection-end-line="134" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/bitwise_ppm_genetics.py" />
+        <option value="$PROJECT_DIR$/bitwise_ppm_flat.py" />
+        <option value="$PROJECT_DIR$/bitwise_ppm_flat_bwt.py" />
+        <option value="$PROJECT_DIR$/results.txt" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="960" />
+    <option name="y" value="25" />
+    <option name="width" value="960" />
+    <option name="height" value="1055" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="bitwise_ppm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bitwise_ppm" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.bitwise_ppm_flat_bwt">
+    <configuration name="bitwise_ppm_flat" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="bitwise_ppm" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bitwise_ppm_flat.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="bitwise_ppm_flat_bwt" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="bitwise_ppm" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bitwise_ppm_flat_bwt.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="bitwise_ppm_genetics" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="bitwise_ppm" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bitwise_ppm_genetics.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.bitwise_ppm_genetics" />
+      <item itemvalue="Python.bitwise_ppm_flat" />
+      <item itemvalue="Python.bitwise_ppm_flat_bwt" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.bitwise_ppm_flat_bwt" />
+        <item itemvalue="Python.bitwise_ppm_flat" />
+        <item itemvalue="Python.bitwise_ppm_genetics" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b8692e44-6972-43a3-91b7-3da6fc9c9a26" name="Default" comment="" />
+      <created>1526481173870</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1526481173870</updated>
+    </task>
+    <task id="LOCAL-00001" summary="+ bitwise_ppm_exe genetic algorithm">
+      <created>1526484684365</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1526484684365</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
+    <layout>
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5005208" side_tool="true" weight="0.32946146" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Python Console" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49947917" weight="0.32944915" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.125" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.3296875" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.log" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="+ bitwise_ppm_exe genetic algorithm" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ bitwise_ppm_exe genetic algorithm" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/bitwise_ppm_genetics.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="6" column="13" lean-forward="true" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitwise_ppm_genetics.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/junk.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitwise_ppm_flat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="32" column="57" selection-start-line="32" selection-start-column="57" selection-end-line="32" selection-end-column="57" />
+          <folding>
+            <element signature="e#106#115#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitwise_ppm_flat_bwt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="980">
+          <caret line="50" column="10" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2640">
+          <caret line="134" lean-forward="true" selection-start-line="134" selection-end-line="134" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

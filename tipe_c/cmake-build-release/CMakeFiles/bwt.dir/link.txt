@@ -1,1 +1,0 @@
-/usr/bin/cc -O3 -DNDEBUG   CMakeFiles/bwt.dir/bwt/bwt_2.c.o CMakeFiles/bwt.dir/bwt/bwt_2_launcher.c.o  -o bwt 
