@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-"""Optimizes escape_probs params for bitwise_ppm_exe."""
+"""Bench BWT + bitwise_ppm."""
 
 import os
-import matplotlib.pyplot as plt
+import bitwise_ppm_bwt.bench_plot as myplt
+import numpy as np
 
 MAX_CONTEXT_SIZE = 28
 EXE = "./bitwise_ppm_flat_exe"
@@ -23,7 +24,9 @@ CHECK_CMD = "cmp -s {} {}".format(RAW_FILE, DEC_FILE)
 
 def main():
     """Launcher."""
-    plt.figure()
+    ratios = [[], []]
+    effs = [[], []]
+    factors = [[], []]
     for context_size in range(MAX_CONTEXT_SIZE + 1):
         if (os.system(ENC_CMD_PARTIAL.format(context_size)) != 0 or
             os.system(DEC_CMD_PARTIAL.format(context_size)) != 0 or
@@ -32,15 +35,29 @@ def main():
         else:
             ratio = os.path.getsize(ENC_FILE) / RAW_SIZE
             print("[{}]: {}".format(context_size, ratio))
-            plt.plot(context_size, ratio, "or")
-            plt.plot(context_size, 1 - ratio, "ob")
-            plt.plot(context_size, 1 / ratio, "og")
-    plt.plot([0, MAX_CONTEXT_SIZE], [ZIP_RATIO, ZIP_RATIO], "-r")
-    plt.plot([0, MAX_CONTEXT_SIZE], [1 - ZIP_RATIO, 1 - ZIP_RATIO], "-b")
-    plt.plot([0, MAX_CONTEXT_SIZE], [1 / ZIP_RATIO, 1 / ZIP_RATIO], "-g")
-    plt.axis([0, MAX_CONTEXT_SIZE, 0, 4])
-    plt.savefig("bitwise_ppm_flat.png")
-    plt.show()
+            ratios[0].append(context_size)
+            ratios[1].append(ratio)
+            effs[0].append(context_size)
+            effs[1].append(1 - ratio)
+            factors[0].append(context_size)
+            factors[1].append(1 / ratio)
+    myplt.plot(
+        data_sets=[ratios, effs, factors],
+        y_min=0,
+        y_max=4,
+        y_ticks=np.arange(0, 4 + 0.25, 0.25),
+        lims=[ZIP_RATIO, 1 - ZIP_RATIO, 1 / ZIP_RATIO],
+        lim_lines=["--", "--", "--"],
+        title="bitwise_ppm_flat",
+        x_label="context_size",
+        y_label="",
+        colors=["r", "g", "b"],
+        markers=["+", "+", "+"],
+        lines=["-", "-", "-"],
+        labels=["comp_ratio", "comp_efficiency", "comp_factor"],
+        save_path="bitwise_ppm_flat.png",
+        show=True
+    )
 
 if __name__ == "__main__":
     main()
