@@ -1,6 +1,5 @@
 package org.tbagrel.bitutil.bitarray;
 
-import org.jetbrains.annotations.NotNull;
 import org.tbagrel.bitutil.bitarray.exceptions.*;
 
 import java.util.*;
@@ -652,7 +651,7 @@ public class BitArray implements List<Boolean> {
      * sequence
      * @return Iterator over the bits of the bitarray
      */
-    @NotNull public Iterator<Boolean> iterator() {
+    public Iterator<Boolean> iterator() {
         return new BitArrayIterator(this);
     }
 
@@ -660,7 +659,7 @@ public class BitArray implements List<Boolean> {
      * Return a Boolean array corresponding to the bitarray instance.
      * @return Corresponding Boolean array
      */
-    @NotNull public Boolean[] toArray() {
+    public Boolean[] toArray() {
         Boolean[] result = new Boolean[this._length];
         System.arraycopy(this._bits, 0, result, 0, this._length);
         return result;
@@ -669,7 +668,7 @@ public class BitArray implements List<Boolean> {
     /**
      * Unsupported operation. Used to implement List only.
      */
-    @NotNull public <T> T[] toArray(@NotNull T[] a) {
+    public <T> T[] toArray(T[] a) {
         throw new UnsupportedOperationException("Invalid operation for this " +
                                                 "class");
     }
@@ -706,7 +705,7 @@ public class BitArray implements List<Boolean> {
     /**
      * Unsupported operation. Used to implement List only.
      */
-    public boolean containsAll(@NotNull Collection<?> c) {
+    public boolean containsAll(Collection<?> c) {
         throw new UnsupportedOperationException("Invalid operation for this " +
                                                 "class");
     }
@@ -714,7 +713,7 @@ public class BitArray implements List<Boolean> {
     /**
      * Unsupported operation. Used to implement List only.
      */
-    public boolean addAll(@NotNull Collection<? extends Boolean> c) {
+    public boolean addAll(Collection<? extends Boolean> c) {
         throw new UnsupportedOperationException("Invalid operation for this " +
                                                 "class");
     }
@@ -723,7 +722,7 @@ public class BitArray implements List<Boolean> {
      * Unsupported operation. Used to implement List only.
      */
     public boolean addAll(
-        int index, @NotNull Collection<? extends Boolean> c) {
+        int index, Collection<? extends Boolean> c) {
         throw new UnsupportedOperationException("Invalid operation for this " +
                                                 "class");
     }
@@ -731,7 +730,7 @@ public class BitArray implements List<Boolean> {
     /**
      * Unsupported operation. Used to implement List only.
      */
-    public boolean removeAll(@NotNull Collection<?> c) {
+    public boolean removeAll(Collection<?> c) {
         throw new UnsupportedOperationException("Invalid operation for this " +
                                                 "class");
     }
@@ -739,7 +738,7 @@ public class BitArray implements List<Boolean> {
     /**
      * Unsupported operation. Used to implement List only.
      */
-    public boolean retainAll(@NotNull Collection<?> c) {
+    public boolean retainAll(Collection<?> c) {
         throw new UnsupportedOperationException("Invalid operation for this " +
                                                 "class");
     }
@@ -906,7 +905,7 @@ public class BitArray implements List<Boolean> {
      * sequence.
      * @return List iterator over the bits of the bitarray
      */
-    @NotNull public ListIterator<Boolean> listIterator() {
+    public ListIterator<Boolean> listIterator() {
         return new BitArrayListIterator(this);
     }
 
@@ -919,7 +918,7 @@ public class BitArray implements List<Boolean> {
      * @throws java.lang.IndexOutOfBoundsException
      *     if index is not valid
      */
-    @NotNull public ListIterator<Boolean> listIterator(int i) {
+    public ListIterator<Boolean> listIterator(int i) {
         return new BitArrayListIterator(this, i);
     }
 
@@ -934,7 +933,7 @@ public class BitArray implements List<Boolean> {
      * @throws java.lang.IndexOutOfBoundsException
      *     if indexes are not valid
      */
-    @NotNull public List<Boolean> subList(int fromIndex, int toIndex)
+    public List<Boolean> subList(int fromIndex, int toIndex)
         throws IndexOutOfBoundsException {
         if (fromIndex < 0 ||
             fromIndex >= this._length ||

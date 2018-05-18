@@ -10,8 +10,8 @@
 
 #include "rle_code_t_vect.h"
 
-#define BUFFER_SIZE 4096
-#define BYTE_SIZE 8
+#define BUFFER_SIZE ((size_t) (4096))
+#define BYTE_SIZE ((size_t) (8))
 
 typedef char * str;
 typedef uint8_t count_t;

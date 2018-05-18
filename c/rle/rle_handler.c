@@ -39,7 +39,23 @@ void buffer_write_at(
 }
 
 rle_code_t buffer_read_at(byte_t *buffer, size_t i_bit, size_t rle_code_size) {
-    return 0;
+    rle_code_t rle_code = 0;
+    size_t i_byte = i_bit / BYTE_SIZE;
+    size_t bit_loffset = i_bit % BYTE_SIZE;
+    size_t bit_roffset = BYTE_SIZE - bit_loffset;
+    size_t remaining_bits = rle_code_size;
+    rle_code = buffer[i_byte] & ((1U << bit_roffset) - 1);
+    remaining_bits -= bit_roffset;
+    i_byte += 1;
+    while (remaining_bits > 0) {
+        bit_loffset =
+            (remaining_bits >= BYTE_SIZE) ? BYTE_SIZE : remaining_bits;
+        bit_roffset = BYTE_SIZE - bit_loffset;
+        rle_code = (rle_code << bit_loffset) | (buffer[i_byte] >> bit_roffset);
+        remaining_bits -= bit_loffset;
+        i_byte += 1;
+    }
+    return rle_code;
 }
 
 void encode_file(
@@ -156,8 +172,8 @@ void decode_file(str enc_path, str raw_path, size_t count_bits) {
     i_bit = 0;
     for (i_rle_code = 0; i_rle_code < rle_codes_in_last; i_rle_code++) {
         rle_code_t_vect__add(
-            rle_codes, buffer_read_at(rbuffer, i_bit, rle_code_size)
-            );
+            rle_codes, buffer_read_at(rbuffer, i_bit, rle_code_size));
+        i_bit += rle_code_size;
     }
 
     fclose(enc_file);
@@ -166,13 +182,25 @@ void decode_file(str enc_path, str raw_path, size_t count_bits) {
 
     byte_t buffer[BUFFER_SIZE];
     size_t bytes_written = 0;
-    count_t count;
+    size_t mask = (1U << BYTE_SIZE) - 1;
+    count_t count, i_count;
     byte_t byte;
     rle_code_t rle_code;
 
     for (i_rle_code = 0; i_rle_code < rle_codes->_size; i_rle_code++) {
         rle_code = rle_code_t_vect__get(rle_codes, i_rle_code);
-
+        count = (rle_code >> BYTE_SIZE) + 1;
+        byte = rle_code & mask;
+        for (i_count = 0; i_count < count; i_count++) {
+            if (bytes_written == BUFFER_SIZE) {
+                fwrite(buffer, sizeof(byte_t), bytes_written, raw_file);
+                bytes_written = 0;
+            }
+            buffer[bytes_written++] = byte;
+        }
+    }
+    if (bytes_written > 0) {
+        fwrite(buffer, sizeof(byte_t), bytes_written, raw_file);
     }
 
     fclose(raw_file);
