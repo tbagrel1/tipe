@@ -6,6 +6,7 @@
 import os
 import bitwise_ppm_bwt.bench_plot as myplt
 import numpy as np
+import json
 
 MAX_CONTEXT_SIZE = 28
 EXE = "./bitwise_ppm_flat_exe"
@@ -27,6 +28,7 @@ def main():
     ratios = [[], []]
     effs = [[], []]
     factors = [[], []]
+    results = {}
     for context_size in range(MAX_CONTEXT_SIZE + 1):
         if (os.system(ENC_CMD_PARTIAL.format(context_size)) != 0 or
             os.system(DEC_CMD_PARTIAL.format(context_size)) != 0 or
@@ -41,6 +43,9 @@ def main():
             effs[1].append(1 - ratio)
             factors[0].append(context_size)
             factors[1].append(1 / ratio)
+            results[str(context_size)] = ratio
+    with open("bitwise_ppm_flat.json", "w", encoding="utf-8") as file:
+        file.write(json.dumps(results))
     myplt.plot(
         data_sets=[ratios, effs, factors],
         y_min=0,
@@ -51,7 +56,7 @@ def main():
         title="bitwise_ppm_flat",
         x_label="context_size",
         y_label="",
-        colors=["r", "g", "b"],
+        colors=myplt.DEFAULT_COLORS,
         markers=["+", "+", "+"],
         lines=["-", "-", "-"],
         labels=["comp_ratio", "comp_efficiency", "comp_factor"],

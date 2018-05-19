@@ -4,9 +4,11 @@
 """Bench BWT + RLE."""
 
 import os
-import matplotlib.pyplot as plt
+import numpy as np
+import bitwise_ppm_bwt.bench_plot as myplt
+import json
 
-MAX_COUNT_BITS = 8
+MAX_COUNT_BITS = 7
 EXE = "./rle_exe"
 RAW_FILE = "calgary_rle.tar"
 BWT_FILE = "calgary_rle.bwt"
@@ -27,7 +29,10 @@ CHECK_CMD = "cmp -s {} {}".format(RAW_FILE, UNBWT_FILE)
 
 def main():
     """Launcher."""
-    plt.figure()
+    ratios = [[], []]
+    effs = [[], []]
+    factors = [[], []]
+    results = {}
     for count_bits in range(1, MAX_COUNT_BITS + 1):
         if (os.system(BWT_CMD) != 0 or
             os.system(ENC_CMD_PARTIAL.format(count_bits)) != 0 or
@@ -38,15 +43,32 @@ def main():
         else:
             ratio = os.path.getsize(ENC_FILE) / RAW_SIZE
             print("[{}]: {}".format(count_bits, ratio))
-            plt.plot(count_bits, ratio, "+--r")
-            plt.plot(count_bits, 1 - ratio, "+--b")
-            plt.plot(count_bits, 1 / ratio, "+--g")
-    plt.plot([0, MAX_COUNT_BITS], [ZIP_RATIO, ZIP_RATIO], "--r")
-    plt.plot([0, MAX_COUNT_BITS], [1 - ZIP_RATIO, 1 - ZIP_RATIO], "--b")
-    plt.plot([0, MAX_COUNT_BITS], [1 / ZIP_RATIO, 1 / ZIP_RATIO], "--g")
-    plt.axis([0, MAX_COUNT_BITS, 0, 4])
-    plt.savefig("bwt_rle.png")
-    plt.show()
+            ratios[0].append(count_bits)
+            ratios[1].append(ratio)
+            effs[0].append(count_bits)
+            effs[1].append(1 - ratio)
+            factors[0].append(count_bits)
+            factors[1].append(1 / ratio)
+            results[str(count_bits)] = ratio
+    with open("bwt_rle.json", "w", encoding="utf-8") as file:
+        file.write(json.dumps(results))
+    myplt.plot(
+        data_sets=[ratios, effs, factors],
+        y_min=0,
+        y_max=4,
+        y_ticks=np.arange(0, 4 + 0.25, 0.25),
+        lims=[ZIP_RATIO, 1 - ZIP_RATIO, 1 / ZIP_RATIO],
+        lim_lines=["--", "--", "--"],
+        title="bwt_rle",
+        x_label="count_bits",
+        y_label="",
+        colors=myplt.DEFAULT_COLORS,
+        markers=["+", "+", "+"],
+        lines=["-", "-", "-"],
+        labels=["comp_ratio", "comp_efficiency", "comp_factor"],
+        save_path="bwt_rle.png",
+        show=True
+    )
 
 if __name__ == "__main__":
     main()

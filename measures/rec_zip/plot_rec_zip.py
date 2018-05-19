@@ -4,12 +4,13 @@
 """Plots measures about rec_zip experiment."""
 
 import json
-import matplotlib.pyplot as plt
+import bitwise_ppm_bwt.bench_plot as myplt
 import numpy as np
 
 RESULT_FILE = "rec_zip_measures.txt"
 PLOT_FILE = "rec_zip_measures.png"
 DELTA_WINDOW = 2 ** 15
+MB = 1024 ** 2
 
 def main():
     """Main function."""
@@ -17,18 +18,25 @@ def main():
         experiment = json.loads(result.read())
     init_file_name = experiment["file"]
     spaces = experiment["spaces"]
-    plt.figure()
-    plt.style.use('dark_background')
-    plt.plot(range(len(spaces)), spaces, "+-", color=[64/256,208/256,224/256])
-    plt.title(r"rec zip: $\tt{" + init_file_name + r"}$")
-    plt.xlabel("passes")
-    plt.xticks(np.arange(0, len(spaces), 1))
-    plt.ylabel("space (bytes)")
-    plt.axis([
-        0, len(spaces) - 1,
-        0, 4 * 10 ** 6])
-    plt.savefig(PLOT_FILE, dpi=300, bbox_inches="tight")
-    plt.show()
+
+    myplt.plot(
+        data_sets=[[list(range(len(spaces))), [x / MB for x in
+                                                     spaces]]],
+        y_min=0,
+        y_max=4,
+        y_ticks=np.arange(0, 4 + 0.25, 0.25),
+        lims=None,
+        lim_lines=None,
+        title="rec_zip: calgary.tar",
+        x_label="passes",
+        y_label="size (MB)",
+        colors=myplt.DEFAULT_COLORS,
+        markers=["+"],
+        lines=["-"],
+        labels=None,
+        save_path="rec_zip.png",
+        show=True
+    )
 
 if __name__ == "__main__":
     main()
