@@ -146,7 +146,7 @@ def main():
         y_ticks=np.arange(0, 4 + 0.25, 0.25),
         lims=[0.3, 1 - 0.3, 1 / 0.3],
         lim_lines=["--", "--", "--"],
-        title="bitwise_ppm_flat",
+        #title="bitwise_ppm_flat",
         x_label="context_size",
         y_label="",
         colors=DEFAULT_COLORS,

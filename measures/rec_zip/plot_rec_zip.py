@@ -27,7 +27,7 @@ def main():
         y_ticks=np.arange(0, 4 + 0.25, 0.25),
         lims=None,
         lim_lines=None,
-        title="rec_zip: calgary.tar",
+        #title="rec_zip: calgary.tar",
         x_label="passes",
         y_label="size (MB)",
         colors=myplt.DEFAULT_COLORS,

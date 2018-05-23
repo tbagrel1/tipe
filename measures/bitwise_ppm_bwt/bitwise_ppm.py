@@ -59,7 +59,7 @@ def main():
         y_ticks=np.arange(0, 4 + 0.25, 0.25),
         lims=[ZIP_RATIO, 1 - ZIP_RATIO, 1 / ZIP_RATIO],
         lim_lines=["--", "--", "--"],
-        title="bitwise_ppm",
+        #title="bitwise_ppm",
         x_label="order",
         y_label="",
         colors=myplt.DEFAULT_COLORS,

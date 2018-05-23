@@ -225,9 +225,9 @@
   \end{center}
 
   \begin{itemize}
-    \item\pause Sous-intervalles proportionnels aux \green{$p_i$}
-    \item\pause En pratique, avec des $p_i$ non fixes, gérer plus de quelques symboles est compliqué
-    \item\pause Implémenté avec des entiers pour représenter $[0 ; 1[$
+    \item\pause Sous-intervalles \relief{proportionnels aux $p_i$}
+    \item\pause En pratique, avec des \relief{$p_i$ non fixes}, gérer plus de quelques symboles est compliqué
+    \item\pause Implémenté avec des \relief{entiers} pour représenter $[0 ; 1[$
   \end{itemize}
 \end{frame}
 
@@ -237,9 +237,9 @@
 
   \relief{\tech{ppm}}
   \begin{itemize}
-    \item\pause Le contexte est constitué des $N$ symboles précédents
-    \item\pause Un jeu de $p_i$ pour chaque contexte différent
-    \item\pause Si le contexte n'a jamais été rencontré, on retombe sur un contexte d'ordre $N - 1$ (\it{order fallback}) etc.
+    \item\pause Le contexte est constitué des $N$ symboles \relief{précédents}
+    \item\pause Un jeu de $p_i$ pour \relief{chaque} contexte différent
+    \item\pause Si le contexte n'a jamais été rencontré, on retombe sur un contexte d'ordre $N - 1$ (\green{\it{order fallback}}) etc.
     \item\pause Codage arithmétique
   \end{itemize}
   \pause
@@ -265,9 +265,9 @@
   \pause
   \relief{\tech{bitwise ppm flat}}
   \begin{itemize}
-    \item\pause On retire seulement l'\it{order fallback} en utilisant à la place des probabilités neutres ($0.5 : 0.5$)
+    \item\pause On retire seulement l'\it{order fallback} en utilisant à la place des \relief{probabilités neutres} ($0.5 : 0.5$)
     \item\pause Performances améliorées : \relief{63 \%} d'efficacité !
-    \item\pause Simplement un \it{bitwise encoder} d'ordre fixe (0 - 28 bits)
+    \item\pause Simplement un \it{bitwise encoder} d'ordre fixe \\ (0 - 28 bits)
   \end{itemize}
 \end{frame}
 
