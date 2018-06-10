@@ -1,0 +1,8 @@
+- [Août 2017] Réalisation de Huffman adaptatif en Java. Premières mesures sur du texte seulement
+- [Septembre 2017 - Janvier 2018] Recherches à large spectre sur le thème de la compression, premières implémentations (RLE, BWT, [Huffman adaptatif - abandonné]) en Python
+- [Janvier - Mars 2018] Recherche sur une implémentation efficace de la BWT. Découverte de l'algorithme SA-IS. Tentative de réimplémenter SA-IS, abandonné car trop long et n'apportant rien au final
+- [Mars - Avril 2018] Grosse recherche sur la PPM et les bitwise encoders. Naissance de l'idée du bitwise PPM
+- [Mai 2018] Implémentation du bitwise PPM en C
+- [Mai 2018] Premières mesures et tentatives d'amélioration sur bitwise PPM
+- [Mai 2018] Retour à un bitwise encoder classique (appelé ici bitwise ppm flat), implémentation en C. Utilisation de la BWT (utilisant SA-IS). Réimplémentation de la RLE, en C
+- [Mai 2018] Améliorations sur les différents algorithmes et mesures finales

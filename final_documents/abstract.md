@@ -1,0 +1,3 @@
+A (small) dive into the lossless compression universe
+
+The aim of the project was to understand some of the main lossless compression principles in order to use them to create custom implementations of famous compression algorithms. Once implemented, benchmarks were made for those algorithms, to point out which one was the most performant and above all to measure improvements brought by the binding of several algorithms. The end product is a not too slow compression program which reaches 83 % of ZIP compression ratio, by using arithmetic coding, prediction by partial matching (PPM) and Burrows-Wheeler transform (BWT).

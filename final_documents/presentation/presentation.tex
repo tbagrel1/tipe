@@ -49,6 +49,9 @@
   \frametitle{\secname{}}
   \framesubtitle{\subsecname{}}
 
+  Analogie : sources de données $\leftrightarrow$ fonctions
+  \smallskip\pause
+
   \relief{Compression des données sans pertes}
   \begin{itemize}
     \item \pause exploiter les régularités des données
@@ -123,10 +126,11 @@
   \end{itemize}
 \end{frame}
 
+\subsection{Codage d'Huffman}
+
 \begin{frame}
   \frametitle{\secname{}}
   \framesubtitle{\subsecname{}}
-  Le codage arithmétique sera détaillé plus loin.
 
   \relief{Codage d'\sc{Huffman}} pour \tt{turlututu}
   \begin{center}
@@ -173,31 +177,7 @@
   \end{center}
 \end{frame}
 
-\subsection{Inefficacité de \sc{Huffman} -- pourquoi}
-
-\begin{frame}
-  \frametitle{\secname{}}
-  \framesubtitle{\subsecname{}}
-  En pratique, efficacité de \relief{32 \%}
-  \pause
-
-  \bigskip
-
-  En appliquant directement \sc{Shannon} aux \relief{fréquences} d'apparition,
-  on commet des erreurs
-  \begin{itemize}
-    \item\pause un symbole n'est pas \relief{indépendant} des précédents
-    \item\pause par exemple, en Français, q$\to$\blue{u} est plus fréquent que q$\to$\blue{z}
-    \item\pause en quelque sorte, on oublie le caractère \relief{lipschitzien} de nos données
-  \end{itemize}
-  \pause
-
-  \relief{Il faut donc un modèle}
-
-\end{frame}
-
-\section{Modèles généraux}
-\subsection{\tech{bitwise encoder} et \tech{ppm}}
+\subsection{Codage arithmétique}
 
 \begin{frame}
   \frametitle{\secname{}}
@@ -234,6 +214,45 @@
 \begin{frame}
   \frametitle{\secname{}}
   \framesubtitle{\subsecname{}}
+  \vspace{-0.43cm}
+
+  \begin{center}
+    \includegraphics[scale=0.7]{arithmetic_efficiency.png}
+  \end{center}
+\end{frame}
+
+\subsection{Inefficacité de \sc{Huffman} seul -- pourquoi}
+
+\begin{frame}
+  \frametitle{\secname{}}
+  \framesubtitle{\subsecname{}}
+  \relief{\sc{Huffman} seul}
+  \smallskip\pause
+
+  En pratique, efficacité de \relief{32 \%}
+  \pause
+
+  \bigskip
+
+  En appliquant directement \sc{Shannon} aux \relief{fréquences} d'apparition,
+  on commet des erreurs
+  \begin{itemize}
+    \item\pause un symbole n'est pas \relief{indépendant} des précédents
+    \item\pause par exemple, en Français, q$\to$\blue{u} est plus fréquent que q$\to$\blue{z}
+    \item\pause en quelque sorte, on oublie le caractère \relief{lipschitzien} de nos données
+  \end{itemize}
+  \pause
+
+  \relief{Il faut donc un modèle}
+
+\end{frame}
+
+\section{Modèles généraux}
+\subsection{\tech{bitwise encoder} et \tech{ppm}}
+
+\begin{frame}
+  \frametitle{\secname{}}
+  \framesubtitle{\subsecname{}}
 
   \relief{\tech{ppm}}
   \begin{itemize}
@@ -257,6 +276,7 @@
   \framesubtitle{\subsecname{}}
   \relief{\tech{bitwise ppm}}
   \begin{itemize}
+    \item\pause Idée personnelle
     \item\pause Utiliser une \relief{\tech{ppm}} (d'ordre max. 3 octets) avec un encodage \relief{bit par bit}
     \item\pause \relief{49 \%} d'efficacité !
     \item\pause Mais l'\it{order fallback} occasionne des pertes évitables\ldots{}
@@ -267,7 +287,7 @@
   \begin{itemize}
     \item\pause On retire seulement l'\it{order fallback} en utilisant à la place des \relief{probabilités neutres} ($0.5 : 0.5$)
     \item\pause Performances améliorées : \relief{63 \%} d'efficacité !
-    \item\pause Simplement un \it{bitwise encoder} d'ordre fixe \\ (0 - 28 bits)
+    \item\pause Simplement un \it{bitwise encoder} d'ordre fixe \\ (0 - 28 bits) (existait déjà)
   \end{itemize}
 \end{frame}
 
@@ -343,7 +363,7 @@ u & t & u & t & u & \green{|} & t & u & r & \blue{l}\\
 }
 
   \begin{itemize}
-    \item\pause $\tech{bwt}(\tt{turlututu}) = \tt{\blue{uruulutttl}}$
+    \item\pause $\tech{bwt}(\tt{turlututu}) = \tt{\blue{uruu}\green{|}\blue{utttl}}$
     \item\pause Transforme $\green{C^0_m}$ en $\green{C^0}$
   \end{itemize}
 
@@ -359,7 +379,7 @@ u & t & u & t & u & \green{|} & t & u & r & \blue{l}\\
 
   \relief{Avec la \tech{rle}}
   \begin{itemize}
-    \item\pause Très simple : \blue{\tt{uruulutttl}} devient $1\blue{\tt{u}}\,1\blue{\tt{r}}\,2\blue{\tt{u}}\,1\green{|}\,1\blue{\tt{u}}\,3\blue{\tt{t}}\,1\blue{\tt{l}}$
+    \item\pause Très simple : \tt{\blue{uruu}\green{|}\blue{utttl}} devient $1\blue{\tt{u}}\,1\blue{\tt{r}}\,2\blue{\tt{u}}\,1\green{|}\,1\blue{\tt{u}}\,3\blue{\tt{t}}\,1\blue{\tt{l}}$
     \item\pause Efficacité de \relief{41 \%} !
   \end{itemize}
 
@@ -370,6 +390,9 @@ u & t & u & t & u & \green{|} & t & u & r & \blue{l}\\
     \item\pause On gagne (seulement) \relief{2 \%} d'efficacité supplémentaire
     \item\pause Permet d'atteindre mon record personnel :\\
     \green{65 \%} d'efficacité \\ facteur de compression \bf{2,85x} \\ \blue{35 \%} de la taille initiale
+
+    \smallskip
+    \pause \sc{zip} : \bf{3.06x} | record (\sc{zpaq}) : \bf{5.43x}
   \end{itemize}
 
 \end{frame}

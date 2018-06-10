@@ -23,7 +23,7 @@ def plot(
         data_sets, y_min, y_max, y_ticks=None, lims=None,
         lim_lines=None, title="", x_label="", y_label="", colors=None,
         markers=None, lines=None, labels=None, data_kwargs={}, lim_kwargs={},
-        save_path=None, show=True):
+        save_path=None, show=True, x_min=None, x_max=None, x_ticks=None):
     """Plots the specified data."""
     plt.rcParams.update({"font.size": FONT_SIZE})
     plt.rcParams.update({"font.family": "monospace", "font.monospace": [
@@ -54,8 +54,10 @@ def plot(
                 linewidth=LINEWIDTH,
                 **data_kwargs
             )[0])
-    x_min = min([min(data_set[0]) for data_set in data_sets])
-    x_max = max([max(data_set[0]) for data_set in data_sets])
+    if x_min is None:
+        x_min = min([min(data_set[0]) for data_set in data_sets])
+    if x_max is None:
+        x_max = max([max(data_set[0]) for data_set in data_sets])
     if lims:
         for lim, color, lim_line in zip(lims, colors, lim_lines):
             plt.plot([x_min, x_max], [lim, lim], color=color,
@@ -68,7 +70,10 @@ def plot(
     plt.grid(True, color=GRID_COLOR)
     if y_ticks is not None:
         plt.yticks(y_ticks)
-    plt.xticks(np.arange(x_min, x_max + 1, 1))
+    if x_ticks is None:
+        plt.xticks(np.arange(x_min, x_max + 1, 1))
+    else:
+        plt.xticks(x_ticks)
 
     ax = plt.gca()
     ax.set_axis_bgcolor(BG_COLOR)
